@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="cover">
+				<picture class="cover__picture">
+					<source media="(min-width:991.99px)" srcset="@img/cover-bg--pc.png">
+					<source media="(min-width:767.99px)" srcset="@img/cover-bg--tab.png">
+					<source media="(min-width:0px)" srcset="@img/cover-bg--mob.png">
+					<img src="@img/cover-bg--mob.png" alt="background">
+				</picture>
+				<div class="cover__container">
+					<div class="cover__cnt">
+						<h1 class="cover__title -title">Welcome to the Future of Landings</h1>
+						<div class="cover__subtitle">
+							Create screens right in your Figma. Connect different blocks and create awesome landings.
+							<span>Yes, it
+								just takes a few minutes!</span>
+						</div>
+						<div class="cover__buttons">
+							<a href="#" class="button _bg">Request a demo</a>
+							<a href="#" class="button button--dark _bg _ic"><img src="@img/icons/play.svg" alt="arrow">
+								<span>Watch video</span></a>
+						</div>
+					</div>
+					<div class="cover__images">
+						<img class="cover__image" src="@img/cover-img1.jpg" alt="screenshot">
+						<img class="cover__image" src="@img/cover-img2.jpg" alt="screenshot">
+						<img class="cover__image" src="@img/cover-img3.jpg" alt="screenshot">
+						<img class="cover__image" src="@img/cover-img4.jpg" alt="screenshot">
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

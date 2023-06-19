@@ -1,0 +1,129 @@
+//====================================================================================================
+.cover {
+   position: relative;
+   @include adaptiveValue("padding-top", 225, 100);
+
+
+   &__picture {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+   }
+
+   &__container {
+      position: relative;
+   }
+
+   &__cnt {
+      text-align: center;
+      max-width: 80%;
+      margin: 0 auto;
+
+      @media (min-width:$pc) {
+         max-width: 58%;
+         text-align: left;
+         margin-left: 0;
+      }
+   }
+
+   &__title {
+      text-transform: capitalize;
+      margin-bottom: rem(20);
+
+      @media (min-width:$mobile) {
+         margin-bottom: rem(30);
+      }
+   }
+
+   &__subtitle {
+      font-size: rem(18);
+      margin-bottom: rem(40);
+
+      @media (min-width:$mobile) {
+         font-size: rem(20);
+         margin-bottom: rem(50);
+      }
+
+      @media (min-width:$tablet) {
+         margin-bottom: rem(60);
+      }
+
+      span {
+         display: none;
+
+         @media (min-width:$mobile) {
+            display: inline-block;
+         }
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: rem(20);
+      margin-bottom: rem(40);
+
+      @media (min-width:$mobile) {
+         margin-bottom: rem(70);
+         flex-direction: row;
+         align-items: unset;
+      }
+
+      @media (min-width:$pc) {
+         margin-bottom: 0;
+      }
+
+
+      .button--dark._bg._ic {
+         padding: rem(15) rem(20);
+
+         @media (min-width:$mobile) {
+            padding: rem(20) rem(30);
+
+         }
+
+         img {
+            display: none;
+
+            @media (min-width:$mobile) {
+               display: block;
+            }
+         }
+      }
+
+   }
+
+   &__images {
+      // position: absolute;
+      // top: 0;
+      // right: 0;
+   }
+
+   &__image {}
+}
+
+
+
+//====================================================================================================
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================
+
+
+//====================================================================================================

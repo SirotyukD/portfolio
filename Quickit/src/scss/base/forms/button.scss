@@ -1,0 +1,86 @@
+//<BUTTONS (a.button+tab)>
+// Сніппет (HTML): button
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: rem(10) rem(15);
+	color: var(--primary);
+	background-color: var(--secondary);
+	min-height: rem(44);
+	min-width: rem(113);
+	font-size: rem(16);
+	line-height: math.div(24, 16);
+	font-weight: 700;
+	font-family: var(--fontMain);
+	transition: var(--transition);
+	box-shadow: var(--shadowBlue);
+	gap: rem(10);
+
+	img {
+		transition: var(--transition);
+	}
+
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--blue500);
+		}
+
+		&:hover._ic img {
+			transform: translateX(rem(5));
+		}
+	}
+
+	&._fw {
+		width: 100%;
+	}
+
+	&._md {
+		padding: rem(15) rem(20);
+		gap: rem(20);
+
+		&._ic {
+			padding: rem(15) rem(15) rem(15) rem(20);
+		}
+	}
+
+	&._bg {
+		padding: rem(20) rem(30);
+		gap: rem(30);
+
+		&._ic {
+			padding: rem(20) rem(20) rem(20) rem(30);
+		}
+	}
+
+
+	&.button--dark {
+		background: rgba(255, 255, 255, 0.1);
+		border: 1px solid rgba(255, 255, 255, 0.1);
+		box-shadow: unset;
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: rgba(255, 255, 255, 0.15);
+			}
+		}
+
+		&._md {
+			padding: rem(15) rem(20);
+
+			&._ic {
+				padding: rem(15) rem(20);
+			}
+		}
+
+		&._bg {
+			padding: rem(20) rem(30);
+
+			&._ic {
+				padding: rem(20) rem(30);
+			}
+		}
+	}
+}

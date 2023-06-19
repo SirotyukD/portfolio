@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section id="cover" class="cover">
+				<picture class="cover__picture-bg">
+					<source media="(min-width:991.99px)" srcset="@img/cover-bg--pc.jpg">
+					<source media="(min-width:0px)" srcset="@img/cover-bg--mob.jpg">
+					<img src="@img/cover-bg--mob.jpg" alt="background">
+				</picture>
+				<div class="cover__container">
+					<div class="cover__cnt">
+						<h1 class="cover__title -title">Lifelong memories just a
+							few seconds away</h1>
+						<p class="cover__subtitle">Let’s start your journey with us, your dream will come true</p>
+						<a href="#" class="cover__btn button _lg">EXPLORE NOW</a>
+					</div>
+					<div class="cover__tours tours-cover">
+
+						<div class="tours-cover__wrap">
+							<div class="tours-cover__title">the most famous tour spots in BD</div>
+							<div class="tours-cover__tour">
+								<a href="#" class="tours-cover__image-ibg"><img src="@img/tour-cover1.jpg"
+										alt="saint Martin"></a>
+								<p class="tours-cover__tour-title">saint Martin</p>
+							</div>
+							<div class="tours-cover__tour">
+								<a href="#" class="tours-cover__image-ibg"><img src="@img/tour-cover2.jpg"
+										alt="saint Martin"></a>
+								<p class="tours-cover__tour-title">Cox’s Bazar</p>
+							</div>
+							<div class="tours-cover__tour">
+								<a href="#" class="tours-cover__image-ibg"><img src="@img/tour-cover3.jpg"
+										alt="saint Martin"></a>
+								<p class="tours-cover__tour-title">ratargul Forest</p>
+							</div>
+						</div>
+
+					</div>
+					<div class="cover__follow-us follow-us">
+						<div class="follow-us__title">Follow us</div>
+						<a href="#" class="follow-us__image-ibg"><img src="@img/icon-ins2.svg" alt="instagram"></a>
+						<a href="#" class="follow-us__image-ibg"><img src="@img/icon-tw2.svg" alt="twitter"></a>
+					</div>
+				</div>
+			</section>
+			<section id="about" class=" about">
+				<div class="about__container">
+					<div class="about__cnt">
+						<h2 class="about__title -title">About us</h2>
+						<p class="about__subtitle -subtitle">The best travel agency for you</p>
+						<p class="about__txt">Lorem ipsum dolor sit amet, consectetur
+							adipiscing elit. In elementum sit libero, placerat
+							nibh facilisis in rutrum. Risus, gravida purus nunc
+							suspendisse. Sit elementum mi, netus in sit. Massa
+							posuere ac auctor quis elementum.</p>
+						<a href="#" class="about__link">Read more about us</a>
+					</div>
+					<div class="about__image-ibg"><img src="@img/about.jpg" alt="boat"></div>
+
+				</div>
+			</section>
+			<section id="services" class="services">
+				<div class="services__container">
+					<h2 class="services__title -title">Our services</h2>
+					<p class="services__txt -subtitle">We help our clients throughout the trip</p>
+					<div class="services__items">
+						<div class="services__item">
+							<div class="services__item-img">
+								<div class="services__image-ibg -ibg_contain"><img src="@img/icon-serv1.svg" alt="DESTINATIONS">
+								</div>
+							</div>
+							<div class="services__item-title">DESTINATIONS</div>
+							<div class="services__item-txt">Choose any destination
+								you like, we have several
+								country ratings</div>
+						</div>
+						<div class="services__item">
+							<div class="services__item-img">
+								<div class="services__image-ibg -ibg_contain"><img src="@img/icon-serv2.svg" alt="TOURS"></div>
+							</div>
+							<div class="services__item-title">TOURS</div>
+							<div class="services__item-txt">A large number of tours
+								to different countries for
+								one or a family</div>
+						</div>
+						<div class="services__item">
+							<div class="services__item-img">
+								<div class="services__image-ibg -ibg_contain"><img src="@img/icon-serv3.svg" alt="LUXURY HOTEL">
+								</div>
+							</div>
+							<div class="services__item-title">LUXURY HOTEL</div>
+							<div class="services__item-txt">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+						</div>
+						<div class="services__item">
+							<div class="services__item-img">
+								<div class="services__image-ibg -ibg_contain"><img src="@img/icon-serv4.svg" alt="ASSISTANCE">
+								</div>
+							</div>
+							<div class="services__item-title">ASSISTANCE</div>
+							<div class="services__item-txt">We are ready to solve all your questions and help to deal with
+								problems</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="search" class="search">
+				<div class="search__container">
+					<form class="search__form">
+						<h2 class="search__form-title">
+							Where you want to go?
+						</h2>
+						<input type="text" name="form[where to go]" placeholder="Where to go?"
+							class="search__form-input input">
+						<input data-datepicker type="text" name="form[travel type]" placeholder="Date"
+							class="search__form-input input">
+						<select class="search__form-input" name="form[travel type]" data-class-modif="form">
+							<option value="1" selected>Travel type</option>
+							<option value="2">Type №1</option>
+							<option value="3">Type №2</option>
+							<option value="4">Type №3</option>
+						</select>
+						<button type="submit" class="button">Search</button>
+					</form>
+				</div>
+			</section>
+			<section id="destination" class="destination">
+				<div class="destination__container">
+					<h2 class="destination__title -title">Our destination</h2>
+					<p class="destination__txt -subtitle">choose your next destination</p>
+					<div class="destination__slider swiper">
+						<div class="destination__wrapper swiper-wrapper">
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination1.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination2.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination3.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination4.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination5.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination1.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination2.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination3.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination4.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination5.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination1.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination2.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination3.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination4.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination5.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination6.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+							<div class="destination__slide swiper-slide">
+								<a href="#" class="destination__image-ibg"><img src="@img/destination6.jpg"
+										alt="Saint Martin"></a>
+								<div class="destination__slide-info">
+									<div class="destination__slide-price">100$</div>
+									<div class="destination__slide-txt">Saint Martin</div>
+								</div>
+							</div>
+						</div>
+						<div class="destination__slider-controls">
+							<span>Total 3 pages</span>
+							<button type="button" class="swiper-button-prev"></button>
+							<div class="swiper-pagination"></div>
+							<button type="button" class="swiper-button-next"></button>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="subscribe" class="subscribe">
+				<picture class="subscribe__picture-bg">
+					<source media="(min-width:767.99px)" srcset="@img/subscribe-bg--pc.jpg">
+					<source media="(min-width:0px)" srcset="@img/subscribe-bg--mob.jpg">
+					<img src="@img/subscribe-bg--mob.jpg" alt="background">
+				</picture>
+				<div class="subscribe__container">
+					<div class="subscribe__inner">
+						<h3 class="subscribe__title">subscribe our newsletter</h3>
+						<p class="subscribe__txt">Subscribe our newsletter to get offers and about
+							new places to discover.</p>
+					</div>
+					<form class="subscribe__form">
+						<input type="email" name="form[email]" data-error="Error" placeholder="Your Mail"
+							class="subscribe__form-input input">
+						<button type="submit" class="subscribe__form-btn button">Subscribe</button>
+					</form>
+				</div>
+			</section>
+			<section id="reviews" class="reviews">
+				<div class="reviews__container">
+					<h2 class="reviews__title -title">Reviews</h2>
+					<div class="reviews__txt">we always ask our clients to leave hones reviews, <br> on the basis of
+						which you can make a choice</div>
+					<div class="reviews__item item-review">
+						<div class="item-review__head">
+							<div class="item-review__inf">
+								<div class="item-review__user">
+									<div class="item-review__user-image -ibg"><img src="@img/user.png" alt="Rakib rahman"></div>
+									<div class="item-review__user-inf">
+										<div class="item-review__user-name">Rakib rahman</div>
+										<div class="item-review__user-years">25 y.o</div>
+									</div>
+								</div>
+								<div class="item-review__tour">
+									<div class="item-review__tour-name">
+										<span>Tour:</span>cox’s bazar
+									</div>
+									<div class="item-review__tour-images">
+										<div class="item-review__tour-image -ibg"><img src="@img/tour1.png"
+												alt="Tour: cox’s bazar"></div>
+										<div class="item-review__tour-image -ibg"><img src="@img/tour2.png"
+												alt="Tour: cox’s bazar"></div>
+									</div>
+								</div>
+							</div>
+							<div class="item-review__results">
+								<div class="item-review__results-item">
+									<div class="item-review__results-name">assistance</div>
+									<div class="item-review__results-line">
+										<div class="item-review__results-subline" style="width: 100%;"></div>
+									</div>
+									<div class="item-review__results-val">100%</div>
+								</div>
+								<div class="item-review__results-item">
+									<div class="item-review__results-name">tour quality</div>
+									<div class="item-review__results-line">
+										<div class="item-review__results-subline" style="width: 90%;"></div>
+									</div>
+									<div class="item-review__results-val">90%</div>
+								</div>
+								<div class="item-review__results-item">
+									<div class="item-review__results-name">hotel</div>
+									<div class="item-review__results-line">
+										<div class="item-review__results-subline" style="width: 85%;"></div>
+									</div>
+									<div class="item-review__results-val">85%</div>
+								</div>
+								<div class="item-review__rating">
+									<div class="item-review__rating-name">overall rating: </div>
+									<div class="item-review__rating-val">5</div>
+								</div>
+							</div>
+						</div>
+						<div class="item-review__body">
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu phasellus faucibus neque fusce nunc
+							in. Posuere lectus adipiscing netus massa enim, arcu ut. Arcu arcu nunc suspendisse fermentum. Nunc
+							dictumst pharetra sed.
+							Lorem ipsum dolor sit amet, consectetur adipiscing elit. Arcu phasellus faucibus neque fusce nunc
+							in.
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="trips" class="trips">
+				<div class="trips__container">
+					<h2 class="trips__title -title">Our Recent Trips</h2>
+					<div class="trips__items">
+						<div class="trips__item">
+							<a href="" class="trips__item-image -ibg"><img src="@img/destination1.jpg" alt="Saint Martin"><span
+									class="trips__item-name">Saint
+									Martin</span></a>
+							<div class="trips__item-date">october 19, 2021</div>
+							<div class="trips__item-txt">Lorem ipsum dolor sit amet, consectet
+								adipiscing elit.</div>
+						</div>
+						<div class="trips__item">
+							<a href="" class="trips__item-image -ibg"><img src="@img/destination2.jpg" alt="Saint Martin"><span
+									class="trips__item-name">Saint
+									Martin</span></a>
+							<div class="trips__item-date">october 19, 2021</div>
+							<div class="trips__item-txt">Lorem ipsum dolor sit amet, consectet
+								adipiscing elit.</div>
+						</div>
+						<div class="trips__item">
+							<a href="" class="trips__item-image -ibg"><img src="@img/destination3.jpg" alt="Saint Martin"><span
+									class="trips__item-name">Saint
+									Martin</span></a>
+							<div class="trips__item-date">october 19, 2021</div>
+							<div class="trips__item-txt">Lorem ipsum dolor sit amet, consectet
+								adipiscing elit.</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

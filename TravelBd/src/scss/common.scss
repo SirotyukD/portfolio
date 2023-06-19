@@ -1,0 +1,250 @@
+// Заголовки, загальні БЕМ блоки та інше...
+
+body {
+   @include adaptiveValue("font-size", 24, 16);
+}
+
+section {
+   @include adaptiveValue("margin-top", 200, 75);
+}
+
+.-title {
+   font-family: var(--fontJosefin);
+   font-weight: 600;
+   @include adaptiveValue("font-size", 88, 40);
+   color: var(--secondary);
+   line-height: math.div(100, 88);
+   text-transform: capitalize;
+   @include adaptiveValue("margin-bottom", 40, 20);
+
+}
+
+
+
+[class*="picture-bg"] {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   max-width: 100%;
+   z-index: -1;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+.-subtitle {
+   color: var(--blue);
+   font-weight: 400;
+   @include adaptiveValue("font-size", 32, 20);
+   @include adaptiveValue("margin-bottom", 40, 20);
+}
+
+.socials {
+
+   &__image-ibg {
+      display: inline-flex;
+      width: rem(24);
+      height: rem(24);
+      @include adaptiveValue("margin-right", 22, 15);
+   }
+}
+
+.tours-cover {
+
+   &__wrap {
+      display: flex;
+      gap: rem(35);
+      width: 100%;
+      position: relative;
+      margin: 0 0 0 auto;
+      transform: translateX(120px);
+      max-width: rem(995);
+      width: 75%;
+
+      @media (max-width: em(1699.9)) {
+         transform: translateX(60px);
+      }
+
+      @media (max-width: em(1499.9)) {
+         transform: translateX(0);
+      }
+
+      @media (max-width: em(1199.99)) {
+         width: 70%;
+         gap: rem(20);
+      }
+
+      @media (max-width:$mobile) {
+         padding-top: rem(30);
+         width: 100%;
+         gap: rem(10);
+      }
+   }
+
+   &__title {
+      position: absolute;
+      top: 50%;
+      left: -56%;
+      transform: translateY(-50%);
+      @include adaptiveValue("font-size", 30, 18);
+      text-transform: capitalize;
+      max-width: 30vw;
+
+      @media (max-width: em(1699)) {
+         @include adaptiveValue("font-size", 25, 16);
+         max-width: rem(205);
+         left: rem(-290);
+      }
+
+      @media (max-width:$tablet) {
+         max-width: rem(175);
+         left: rem(-220);
+      }
+
+      @media (max-width:$mobile) {
+         top: 0;
+         left: 50%;
+         transform: translateX(-50%);
+         max-width: unset;
+         width: 100%;
+
+      }
+
+      &::after {
+         position: absolute;
+         content: '';
+         top: 50%;
+         right: rem(-50);
+         transform: translate(0, -50%);
+         width: rem(24);
+         height: rem(16);
+         background: url('@img/icon-arr-right.svg') no-repeat center / contain;
+         filter: var(--filter-white);
+         transition: var(--transition);
+
+         @media (max-width:$tablet) {
+            right: rem(-30);
+         }
+
+         @media (max-width:$mobile) {
+
+            display: none;
+         }
+      }
+   }
+
+   &__tour {
+      width: 100%;
+      text-align: center;
+   }
+
+   &__image-ibg {
+      width: 100%;
+      height: rem(420);
+      display: block;
+      margin-bottom: rem(20);
+      filter: drop-shadow(0px 5px 12px rgba(0, 0, 0, 0.25));
+      transition: var(--transition);
+
+      @media (any-hover: hover) {
+         &:hover {
+            transform: translateY(-5px);
+         }
+      }
+
+      @media (max-width: em(1199.99)) {
+         height: rem(350);
+      }
+
+      @media (max-width:$tablet) {
+         height: rem(150);
+      }
+
+      &::before {
+         position: absolute;
+         content: '';
+         bottom: rem(40);
+         left: 50%;
+         width: rem(45);
+         height: rem(45);
+         transform: translateX(-50%);
+         background: url('@img/icon-play.svg') no-repeat center / contain;
+         z-index: 3;
+         background-blend-mode: luminosity;
+
+         @media (max-width:$tablet) {
+            bottom: rem(25);
+         }
+
+      }
+
+      &::after {
+         position: absolute;
+         content: '';
+         bottom: 0;
+         left: 0;
+         width: 100%;
+         height: rem(5);
+         background: var(--yellow);
+         border-radius: rem(10);
+      }
+   }
+
+   &__tour-title {
+      text-transform: capitalize;
+      @include adaptiveValue("font-size", 30, 16);
+   }
+}
+
+.follow-us {
+   display: flex;
+   flex-direction: column;
+   gap: rem(24);
+
+   &__title {
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      @include adaptiveValue("font-size", 18, 14);
+      font-weight: 700;
+      pointer-events: none;
+   }
+
+   &__image-ibg {
+      width: rem(20);
+      height: rem(20);
+      display: block;
+   }
+}
+
+.form-subscribe {
+   display: flex;
+
+   &__input {
+      background: transparent;
+      border: 1px solid #FFFFFF;
+      border-right: unset;
+      min-height: rem(44);
+      color: #fff;
+      border-radius: 0;
+   }
+
+   &__button {
+      border-radius: unset;
+      font-weight: 300;
+      text-transform: capitalize;
+      min-width: rem(90);
+      min-height: rem(44);
+      padding: rem(5) rem(10);
+
+      @media (any-hover: hover) {
+         &:hover {
+            transform: unset;
+         }
+      }
+   }
+}

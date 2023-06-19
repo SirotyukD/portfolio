@@ -1,0 +1,146 @@
+//====================================================================================================
+.footer {
+   background-color: #FBFBFB;
+   color: var(--dark);
+   position: relative;
+   overflow: hidden;
+
+   &__bg {
+      position: absolute;
+      top: 0;
+      right: 0;
+      z-index: 1;
+   }
+
+   &__container {
+      position: relative;
+      z-index: 2;
+   }
+
+   &__menus {
+      padding: rem(40) 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: rem(30);
+
+      @media (min-width:$mobile) {
+         padding: rem(60) 0;
+      }
+
+      @media (min-width:$tablet) {
+         padding: rem(70) 0;
+      }
+
+   }
+
+   &__menu {
+      width: calc(50% - rem(15));
+
+      @media (min-width:$mobile) {
+         width: calc(25% - rem(30));
+
+      }
+   }
+
+   &__menu-title {
+      color: var(--dark);
+      font-size: rem(18);
+      margin-bottom: rem(25);
+
+      @media (min-width:$mobile) {
+         font-size: rem(20);
+      }
+   }
+
+   &__menu-list {
+      display: flex;
+      flex-direction: column;
+   }
+
+   &__menu-item {
+      margin-bottom: rem(15);
+
+      &:last-child {
+         margin-bottom: 0;
+      }
+   }
+
+   &__menu-link {}
+
+   &__bot {
+      padding: rem(20) 0;
+      border-top: 1px solid rgba(31, 32, 37, 0.03);
+
+      @media (min-width:$mobile) {
+         padding: rem(30) 0;
+      }
+
+      @media (min-width:$tablet) {
+         padding: rem(40) 0;
+         margin-top: rem(20);
+      }
+
+   }
+
+   &__cpr {
+      font-size: rem(14);
+      margin-bottom: rem(14);
+      text-align: center;
+      font-weight: 700;
+
+      @media (min-width:$mobile) {
+         text-align: left;
+      }
+   }
+
+   &__bot-wrap {
+      @media (min-width:$mobile) {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: rem(30);
+      }
+   }
+
+   &__bot-links {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: rem(14);
+      margin-bottom: rem(22);
+      gap: rem(12);
+
+      @media (min-width:$mobile) {
+         margin-bottom: 0;
+      }
+   }
+
+   &__bot-link {
+      opacity: 0.5;
+   }
+
+   &__socials {}
+}
+
+.socials {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: rem(25);
+
+
+   &__link {
+      width: rem(18);
+      height: rem(18);
+      transition: var(--transition);
+
+      @media (any-hover: hover) {
+         &:hover {
+            opacity: 0.5;
+         }
+      }
+   }
+}
+
+
+//====================================================================================================

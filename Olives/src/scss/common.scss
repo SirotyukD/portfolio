@@ -1,0 +1,24 @@
+// Заголовки, загальні БЕМ блоки та інше...
+.-title {
+   @include adaptiveValue("font-size", 32, 24);
+   color: var(--text-primary);
+   line-height: math.div(42, 24);
+   font-weight: 600;
+   letter-spacing: rem(0.1);
+   text-transform: uppercase;
+
+   &.-draw {
+      position: relative;
+      padding-top: rem(30);
+
+      &::before {
+         position: absolute;
+         content: '';
+         width: rem(138);
+         height: rem(15);
+         top: 0;
+         left: rem(-10);
+         background: url('@img/draw.svg') no-repeat center;
+      }
+   }
+}

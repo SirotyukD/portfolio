@@ -1,0 +1,196 @@
+//====================================================================================================
+.header {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	min-height: rem(100);
+	@include adaptiveValue("font-size", 25, 18);
+	display: flex;
+	align-items: center;
+	z-index: 99;
+
+	&__container {
+		flex: 1 1 auto;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 70, 0);
+
+		@media (max-width:$tablet) {
+			flex: unset;
+		}
+	}
+
+	&__logo {
+		@media (max-width:$tablet) {
+			order: 2;
+			width: 50%;
+			text-align: center;
+		}
+	}
+
+	&__menu {
+		@media (max-width:$tablet) {
+			order: 3;
+			width: 25%;
+
+		}
+	}
+
+	&__actions {
+		@media (max-width:$tablet) {
+			order: 1;
+			width: 25%;
+
+		}
+	}
+
+	&__actions-btn {
+		transition: var(--transition);
+		color: var(--accent);
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--primary);
+
+			}
+		}
+
+	}
+}
+
+.logo {}
+
+.menu {
+	flex: 1 1 auto;
+	color: #fff;
+
+
+	@media (max-width:$tablet) {
+		flex: unset;
+	}
+
+	&__icon {}
+
+	&__body {
+		@media (max-width:$tablet) {
+			position: fixed;
+			top: 0;
+			left: 100%;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			transition: var(--transition);
+			z-index: 2;
+
+			.menu-open & {
+				transform: translateX(-100%);
+			}
+
+			&::after {
+				position: absolute;
+				content: '';
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				z-index: -1;
+
+				background: rgba($color: #040E27, $alpha: .8);
+				backdrop-filter: blur(10.6px);
+			}
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: rem(20);
+		flex-wrap: wrap;
+
+		@media (max-width:$tablet) {
+			flex-direction: column;
+		}
+	}
+
+	&__item {}
+
+	&__link {
+		transition: var(--transition);
+		font-weight: 400;
+
+		@media (any-hover: hover) {
+			&:hover {
+				color: var(--accent);
+			}
+		}
+	}
+}
+
+//====================================================================================================
+
+//Burger
+.icon-menu {
+	display: none;
+
+	@media (max-width: $tablet) {
+		display: block;
+		position: relative;
+		width: rem(30);
+		height: rem(18);
+		z-index: 5;
+		margin: 0 0 0 auto;
+
+		@media (any-hover: none) {
+			cursor: default;
+		}
+
+		span,
+		&::before,
+		&::after {
+			content: "";
+			transition: all 0.3s ease 0s;
+			right: 0;
+			position: absolute;
+			width: 100%;
+			height: rem(2);
+			background-color: #fff;
+		}
+
+		&::before {
+			top: 0;
+		}
+
+		&::after {
+			bottom: 0;
+		}
+
+		span {
+			top: calc(50% - rem(1));
+		}
+
+		.menu-open & {
+			span {
+				width: 0;
+			}
+
+			&::before,
+			&::after {}
+
+			&::before {
+				top: calc(50% - rem(1));
+				transform: rotate(-45deg);
+			}
+
+			&::after {
+				bottom: calc(50% - rem(1));
+				transform: rotate(45deg);
+			}
+		}
+	}
+}

@@ -1,0 +1,101 @@
+//====================================================================================================
+.footer {
+   background-color: var(--blue700);
+   color: #fff;
+   @include adaptiveValue("margin-top", 200, 75);
+
+   &__container {
+      @include adaptiveValue("padding-top", 100, 50);
+      @include adaptiveValue("padding-bottom", 50, 20);
+   }
+
+   &__logo {
+      @include adaptiveValue("margin-bottom", 40, 20);
+   }
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+      @include adaptiveValue("gap", 120, 0);
+
+      @media (max-width:$tablet) {
+         flex-wrap: wrap;
+         @include adaptiveValue("gap", 60, 30);
+
+      }
+   }
+
+   &__col {
+      width: 33.333%;
+
+      @media (max-width:$tablet) {
+         width: 45%;
+
+         &:first-child {
+            order: 3;
+            width: 100%;
+         }
+      }
+
+      @media (max-width:$mobileSmall) {
+         width: 100%;
+      }
+   }
+
+   &__col-title {
+      @include adaptiveValue("margin-bottom", 35, 20);
+      font-family: var(--fontJosefin);
+      text-transform: capitalize;
+      @include adaptiveValue("font-size", 25, 18);
+
+   }
+
+   &__col-txt {
+      @include adaptiveValue("font-size", 16, 12);
+      line-height: math.div(26, 16);
+      margin-bottom: rem(20);
+      font-weight: 300;
+   }
+
+   &__socials {}
+
+   &__nav {}
+
+   &__nav-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: rem(15);
+   }
+
+   &__nav-item {
+      width: calc(50% - rem(15));
+   }
+
+   &__nav-link {
+      @include adaptiveValue("font-size", 16, 14);
+      line-height: math.div(26, 16);
+      font-weight: 300;
+      text-transform: capitalize;
+      transition: var(--transition);
+
+      @media (any-hover: hover) {
+         &:hover {
+            color: var(--accent)
+         }
+      }
+
+   }
+
+   &__cpr {
+      @include adaptiveValue("margin-top", 90, 50);
+      text-align: center;
+      line-height: math.div(22, 16);
+      @include adaptiveValue("font-size", 16, 12);
+      font-weight: 300;
+   }
+}
+
+
+
+//====================================================================================================

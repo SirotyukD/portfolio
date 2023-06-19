@@ -1,0 +1,83 @@
+// Заголовки, загальні БЕМ блоки та інше...
+body {
+   background-color: var(--dark);
+   min-height: 2000px;
+}
+
+.-title {
+   font-family: var(--fontTitle);
+   font-weight: 900;
+   color: var(--primary);
+}
+
+h1 {
+   @include adaptiveValue("font-size", 78, 38);
+}
+
+h2 {
+   @include adaptiveValue("font-size", 46, 27);
+}
+
+h3 {
+   @include adaptiveValue("font-size", 36, 21);
+   line-height: math.div(43, 36);
+}
+
+h4 {
+   @include adaptiveValue("font-size", 28, 20);
+}
+
+.-subtitle {
+   color: var(--primary);
+   font-family: var(--fontTitle);
+   font-weight: 900;
+}
+
+.link {
+   position: relative;
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      border-radius: 8px;
+      background-color: #fff;
+      bottom: 0;
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+   }
+
+   @media (any-hover: hover) {
+      &:hover::before {
+         transform-origin: left;
+         transform: scaleX(1);
+      }
+   }
+
+   &._dark {
+      color: var(--dark);
+   }
+
+   &._dark::before {
+      background-color: var(--dark);
+   }
+}
+
+[class*="picture-bg"] {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   max-width: 100%;
+   z-index: -1;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}

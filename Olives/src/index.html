@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Olives"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="cover">
+				<picture class="cover__bg">
+					<source media="(min-width:1920.01px)" srcset="@img/cover--4k.jpg">
+					<source media="(min-width:1199.99px)" srcset="@img/cover--pc.jpg">
+					<source media="(min-width:991.99px)" srcset="@img/cover--lp.jpg">
+					<source media="(min-width:767.99px)" srcset="@img/cover--tab.jpg">
+					<source media="(min-width:0px)" srcset="@img/cover--mob.jpg">
+					<img src="@img/cover--pc.jpg" alt="background">
+				</picture>
+				<div class="cover__container">
+					<div class="cover__body">
+						<h3 class="cover__subtitle">natural product</h3>
+						<h1 class="cover__title"><span>Let’s do business</span> together!</h1>
+						<p class="cover__txt">
+							It is a long established fact that a reader
+							will be distracted by the readable content of a pag
+							when looking at its layout.
+						</p>
+					</div>
+
+				</div>
+			</section>
+			<section class="banner">
+				<div class="banner__container">
+					<a href="#" class="banner__img">
+						<img src="@img/banner.jpg" alt="banner">
+					</a>
+				</div>
+			</section>
+			<section class="ib">
+				<div class="ib__container">
+					<div class="ib__body">
+						<div data-da=".ib__cnt, 768, 1" class="ib__img -ibg">
+							<img src="@img/olive-mockup.jpg" alt="olive-mockup">
+						</div>
+						<article class="ib__cnt">
+							<h2 class="ib__title -title -draw">WHO WE ARE</h2>
+							<p class="ib__txt">
+								Company we are proud to deliver hight quality standarts. In natural enviroment production,
+								delivery and flexibility. organic bio oil a special production from our farm.
+							</p>
+							<a href="#" class="ib__link">READ MORE</a>
+						</article>
+
+					</div>
+				</div>
+			</section>
+			<section class="video">
+				<div class="video__container">
+					<h2 class="video__title -title -draw">WHAT WE DO</h2>
+					<div class="video__wrap" data-dsd-player>
+						<video poster="@img/poster-c.jpg">
+							<source type="video/mp4" src="./files/video/oil.mp4">
+						</video>
+					</div>
+				</div>
+			</section>
+			<section class="quote">
+				<picture class="quote__bg">
+					<source media="(min-width:991.99px)" srcset="@img/quote-bg.png">
+					<source media="(min-width:0px)" srcset="@img/quote-bg.png">
+					<img src="@img/quote-bg.png" alt="background">
+				</picture>
+				<div class="quote__container">
+					<blockquote class="quote__cnt">
+						"Health is wealth, <br>
+						it is always better when it is natural"
+						<cite>@crestodina</cite>
+					</blockquote>
+					<a href="#" class="quote__btn">READ MORE</a>
+				</div>
+			</section>
+			<section class="ib product">
+				<div class="ib__container">
+					<div class="ib__body">
+						<div data-da=".ib__cnt--product, 768, 1" class="ib__img -ibg">
+							<img src="@img/olive-product.jpg" alt="olive-mockup">
+						</div>
+						<article class="ib__cnt ib__cnt--product">
+							<h2 class="ib__title -title -draw">PRODUCT</h2>
+							<p class="ib__txt">
+								Company we are proud to deliver hight quality standarts. In natural enviroment production,
+								delivery and flexibility. organic bio oil a special production from our farm.
+							</p>
+							<a href="#" class="ib__link">READ MORE</a>
+						</article>
+
+					</div>
+				</div>
+			</section>
+			<section class="contacts">
+				<picture class="contacts__bg">
+					<source media="(min-width:0px)" srcset="@img/contact-bg.png">
+					<img src="@img/contact-bg.png" alt="background">
+				</picture>
+				<picture class="contacts__dec">
+					<source media="(min-width:0px)" srcset="@img/contact-dec.png">
+					<img src="@img/contact-dec.png" alt="background">
+				</picture>
+				<div class="contacts__container">
+					<div class="contacts__body cover__body">
+						<h3 class="contacts__subtitle cover__subtitle">natural product</h3>
+						<h1 class="contacts__title cover__title"><span>Let’s do business</span> together!</h1>
+						<p class="contacts__txt cover__txt">
+							It is a long established fact that a reader
+							will be distracted by the readable content of a pag
+							when looking at its layout.
+						</p>
+						<button class="contacts__btn -btn -filled">CONTACT US</button>
+					</div>
+
+				</div>
+			</section>
+
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+	@@include('html/_js.htm',{})
+</body>
+
+</html>

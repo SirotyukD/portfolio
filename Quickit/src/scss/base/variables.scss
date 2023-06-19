@@ -1,0 +1,60 @@
+// ===============
+// colors palette
+// ===============
+:root {
+
+	//fonts
+	--fontMain: "Urbanist";
+	--fontTitle: "Urbanist";
+	--fontText: "Urbanist";
+
+	//colors
+	--light: #fff;
+	--dark: #1F2025;
+
+	--neutral: #525B66;
+
+	--blue: #205BF1;
+	--blue500: #0036C2;
+
+	--yellow300: #F2BE6F;
+	--yellow: #E9900C;
+	--yellow500: #B97500;
+
+	--red300: #FA787F;
+	--red: #F12052;
+	--red500: #C50230;
+
+	--cyan300: #8FE9EF;
+	--cyan: #13D2DE;
+	--cyan500: #09B0BB;
+
+	--violet300: #915EFD;
+	--violet: #661FFC;
+	--violet500: #3E00C1;
+
+
+
+
+	//shadows
+	--shadow: 20px 20px 100px rgba(31, 32, 37, 0.6);
+	--shadowBlue: 0px 5px 15px rgba(32, 91, 241, 0.2);
+
+	//filters
+	--filter-white: invert(100%) sepia(92%) saturate(2%) hue-rotate(100deg) brightness(103%) contrast(101%);
+	--filter-yellow: invert(82%) sepia(27%) saturate(4085%) hue-rotate(358deg) brightness(104%) contrast(103%);
+	--filter-grey: invert(67%) sepia(5%) saturate(187%) hue-rotate(188deg) brightness(85%) contrast(83%);
+
+
+	// Site colors (Кольори сайту):
+	// =================================================================
+	--primary: var(--light); // Site main color - (Основний колір сайту)
+	--secondary: var(--blue); // Site secondary color - (Додатковий колір сайту)
+	--accent: var(--red); // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+	--inverse: var(--yellow); // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+
+
+	//transition
+	--transition: background-color .3s ease, color .3s ease, filter .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease, padding .3s ease;
+
+}
