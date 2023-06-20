@@ -55,6 +55,14 @@
 		}
 	}
 
+	&._link {
+		padding: 0;
+		min-height: unset;
+		background: unset;
+		box-shadow: unset;
+		color: var(--secondary);
+	}
+
 
 	&.button--dark {
 		background: rgba(255, 255, 255, 0.1);

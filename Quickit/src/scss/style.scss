@@ -37,10 +37,12 @@ $maxWidth: 1920;
 $maxWidthContainer: 1170;
 // Загальний відступ у контейнера
 // (30 = по 15px ліворуч і праворуч, 0 = немає відступу)
-$containerPadding: 30;
+$containerPadding: 40;
+$containerPaddingTablet: 60;
 
 // Ширина спрацьовування першого брейкпоінту
 $containerWidth: $maxWidthContainer + $containerPadding;
+$containerWidthTablet: $maxWidthContainer + $containerPaddingTablet;
 
 // Брейк-поїнти
 $pc: em($containerWidth); // ПК, ноутбуки, деякі планшети у горизонтальному положенні
@@ -109,11 +111,22 @@ body {
 		@if ($maxWidthContainer>0) {
 			max-width: rem($containerWidth);
 			margin: 0 auto;
+
+			@media (min-width:$mobile) {
+
+				max-width: rem($containerWidthTablet);
+
+			}
 		}
 
 		@if ($containerPadding>0) {
 			@if ($maxWidthContainer>0) {
 				padding: 0 rem(math.div($containerPadding, 2));
+
+				@media (min-width:$mobile) {
+					padding: 0 rem(math.div($containerPaddingTablet, 2));
+
+				}
 			}
 
 			@else {

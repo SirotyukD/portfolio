@@ -7,7 +7,9 @@
 // Підключаємо слайдер Swiper з node_modules
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
-import Swiper, { Navigation, Pagination, Grid } from 'swiper';
+import Swiper, {
+	Pagination, Autoplay, EffectCreative
+} from 'swiper';
 // import Swiper from 'swiper/bundle';
 /*
 Основні модулі слайдера:
@@ -25,29 +27,49 @@ EffectFade, Lazy, Manipulation
 // Повний набір стилів з node_modules
 // import 'swiper/css';
 import 'swiper/css';
-import 'swiper/css/navigation';
+// import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-import 'swiper/css/grid';
+import 'swiper/css/effect-creative';
+// import 'swiper/css/grid';
 
 // Ініціалізація слайдерів
 function initSliders() {
 	// Список слайдерів
 	// Перевіряємо, чи є слайдер на сторінці
-	if (document.querySelector('.swiper')) { // Вказуємо склас потрібного слайдера
+	if (document.querySelector('.cta__slider')) { // Вказуємо склас потрібного слайдера
 		// Створюємо слайдер
-		new Swiper('.swiper', { // Вказуємо склас потрібного слайдера
+		new Swiper('.cta__slider', { // Вказуємо склас потрібного слайдера
 			// Підключаємо модулі слайдера
 			// для конкретного випадку
-			modules: [Navigation, Pagination, Grid],
-			slidesPerView: 2,
-			grid: {
-				rows: 2,
+			modules: [Pagination, Autoplay, EffectCreative],
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
 			},
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					shadow: true,
+					origin: "left center",
+					translate: ["-5%", 0, -200],
+					rotate: [0, 100, 0],
+				},
+				next: {
+					origin: "right center",
+					translate: ["5%", 0, -200],
+					rotate: [0, -100, 0],
+				},
+			},
+			// grid: {
+			// 	rows: 2,
+			// },
 			observer: true,
 			observeParents: true,
 			// slidesPerView: 3,
-			spaceBetween: 15,
-			slidesPerGroup: 2,
+			spaceBetween: 5,
+			// slidesPerGroup: 2,
 			// autoHeight: true,
 			// speed: 800,
 
@@ -70,9 +92,9 @@ function initSliders() {
 			pagination: {
 				el: '.swiper-pagination',
 				clickable: true,
-				renderBullet: function (index, className) {
-					return '<span class="' + className + '">' + (index + 1) + "</span>";
-				},
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + "</span>";
+				// },
 			},
 
 			// Скроллбар
@@ -84,21 +106,114 @@ function initSliders() {
 			*/
 
 			// Кнопки "вліво/вправо"
-			navigation: {
-				prevEl: '.swiper-button-prev',
-				nextEl: '.swiper-button-next',
-			},
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
 
 			// Брейкпоінти
 			breakpoints: {
-				768: {
-					spaceBetween: 20,
+				// 768: {
+				// 	spaceBetween: 20,
+				// },
+				// 992: {
+				// 	slidesPerView: 3,
+				// 	slidesPerGroup: 3,
+				// 	spaceBetween: 34,
+				// }
+			},
+
+			// Події
+			// on: {
+
+			// }
+		});
+	}
+	if (document.querySelector('.graph__slider')) { // Вказуємо склас потрібного слайдера
+		// Створюємо слайдер
+		new Swiper('.graph__slider', { // Вказуємо склас потрібного слайдера
+			// Підключаємо модулі слайдера
+			// для конкретного випадку
+			modules: [Pagination, Autoplay, EffectCreative],
+			slidesPerView: 1,
+			loop: true,
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			effect: 'creative',
+			creativeEffect: {
+				prev: {
+					shadow: true,
+					origin: "left center",
+					translate: ["-5%", 0, -200],
+					rotate: [0, 100, 0],
 				},
-				992: {
-					slidesPerView: 3,
-					slidesPerGroup: 3,
-					spaceBetween: 34,
-				}
+				next: {
+					origin: "right center",
+					translate: ["5%", 0, -200],
+					rotate: [0, -100, 0],
+				},
+			},
+			// grid: {
+			// 	rows: 2,
+			// },
+			observer: true,
+			observeParents: true,
+			// slidesPerView: 3,
+			spaceBetween: 5,
+			// slidesPerGroup: 2,
+			autoHeight: true,
+			// speed: 800,
+
+			//touchRatio: 0,
+			//simulateTouch: false,
+			// loop: false,
+			//preloadImages: false,
+			//lazy: true,
+
+			/*
+			// Ефекти
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+
+			// Пагінація
+			pagination: {
+				el: '.swiper-pagination',
+				clickable: true,
+				// renderBullet: function (index, className) {
+				// 	return '<span class="' + className + '">' + (index + 1) + "</span>";
+				// },
+			},
+
+			// Скроллбар
+			/*
+			scrollbar: {
+				el: '.swiper-scrollbar',
+				draggable: true,
+			},
+			*/
+
+			// Кнопки "вліво/вправо"
+			// navigation: {
+			// 	prevEl: '.swiper-button-prev',
+			// 	nextEl: '.swiper-button-next',
+			// },
+
+			// Брейкпоінти
+			breakpoints: {
+				// 768: {
+				// 	spaceBetween: 20,
+				// },
+				// 992: {
+				// 	slidesPerView: 3,
+				// 	slidesPerGroup: 3,
+				// 	spaceBetween: 34,
+				// }
 			},
 
 			// Події

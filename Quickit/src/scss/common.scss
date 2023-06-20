@@ -1,7 +1,6 @@
 // Заголовки, загальні БЕМ блоки та інше...
 body {
    background-color: var(--dark);
-   min-height: 2000px;
 }
 
 .-title {
@@ -11,26 +10,71 @@ body {
 }
 
 h1 {
-   @include adaptiveValue("font-size", 78, 38);
+   font-size: rem(40);
+
+   @media (min-width:$mobile) {
+      font-size: rem(78);
+   }
 }
 
 h2 {
-   @include adaptiveValue("font-size", 46, 27);
+   font-size: rem(28);
+   line-height: math.div(36, 28);
+
+   @media (min-width:$mobile) {
+      font-size: rem(46);
+   }
+
 }
 
 h3 {
-   @include adaptiveValue("font-size", 36, 21);
-   line-height: math.div(43, 36);
+   line-height: math.div(34, 22);
+   font-size: rem(22);
+
+   @media (min-width:$mobile) {
+      font-size: rem(36);
+   }
 }
 
 h4 {
    @include adaptiveValue("font-size", 28, 20);
+
+   font-size: rem(20);
+
+   @media (min-width:$mobile) {
+      font-size: rem(28);
+   }
 }
 
 .-subtitle {
    color: var(--primary);
    font-family: var(--fontTitle);
    font-weight: 900;
+   @include adaptiveValue("font-size", 20, 18);
+}
+
+.-subtext {
+   letter-spacing: .1em;
+   text-transform: uppercase;
+   font-size: rem(12);
+   font-weight: 900;
+   margin-bottom: rem(20);
+   display: flex;
+   align-items: center;
+   gap: rem(16);
+
+   @media (min-width:$mobile) {
+      margin-bottom: rem(25);
+   }
+}
+
+.-subtext__icon {
+   width: rem(36);
+   height: rem(36);
+   background: var(--accent);
+   display: flex;
+   align-items: center;
+   justify-content: center;
 }
 
 .link {
@@ -79,5 +123,37 @@ h4 {
       width: 100%;
       height: 100%;
       object-fit: cover;
+   }
+}
+
+.swiper .swiper-slide {
+   height: unset !important;
+}
+
+.swiper .swiper-pagination {
+   position: relative;
+   margin-top: rem(30);
+   padding: rem(30);
+
+   @media (min-width:$mobile) {
+      padding: rem(60);
+   }
+
+   @media (min-width:$tablet) {
+      padding: rem(70);
+
+   }
+
+   .swiper-pagination-bullet {
+      width: rem(8);
+      height: rem(8);
+      background: #fff;
+      opacity: .1;
+      border-radius: 0;
+      transition: opacity .3s ease;
+
+      &.swiper-pagination-bullet-active {
+         opacity: 0.5;
+      }
    }
 }
