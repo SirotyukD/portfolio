@@ -1,0 +1,15 @@
+<div id="popup" aria-hidden="true" class="popup">
+	<div class="popup__wrapper">
+		<div class="popup__content">
+			<button data-close type="button" class="popup__close">X</button>
+			<h3 class="popup__title -title">Send request to us!</h3>
+			<div class="popup__text">
+				<form action="files/sendmail/sendmail.php" data-ajax method="POST">
+					<input type="text" name="form[name]" data-error="Error" placeholder="Name" class="input">
+					<input type="email" name="form[email]" data-error="Error" placeholder="E-mail" class="input">
+					<button type="submit" class="button _fw">Send</button>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

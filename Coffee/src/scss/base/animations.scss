@@ -1,0 +1,148 @@
+@keyframes lineHeight {
+
+   0% {
+      max-height: 0;
+   }
+
+
+   100% {
+      max-height: 1000px;
+   }
+}
+
+@keyframes text-focus-in {
+   0% {
+      filter: blur(12px);
+      opacity: 0;
+   }
+
+   100% {
+      filter: blur(0px);
+      opacity: 1;
+   }
+}
+
+.text-focus-in._watcher-view {
+   animation-name: text-focus-in;
+   animation-timing-function: cubic-bezier(0.550, 0.085, 0.680, 0.530);
+   animation-duration: .5s;
+   animation-fill-mode: both;
+
+}
+
+@keyframes blink {
+
+   1% {
+      opacity: .1;
+      filter: blur(15px);
+   }
+
+   15% {
+      opacity: 0;
+      filter: blur(10px);
+   }
+
+   20% {
+      opacity: .15;
+      filter: blur(5px);
+   }
+
+
+   25% {
+      opacity: 0;
+      filter: blur(3px);
+   }
+
+
+   35% {
+      opacity: .25;
+      filter: blur(2px);
+   }
+
+   50% {
+      opacity: .25;
+      filter: blur(1px);
+   }
+
+
+
+   100% {
+      opacity: 1;
+      filter: blur(0);
+   }
+}
+
+.anm-blink._watcher-view {
+   animation-name: blink;
+   animation-duration: 1.5s;
+   animation-fill-mode: both;
+}
+
+@keyframes slide-in-fwd-center {
+   0% {
+      transform: translateZ(-1400px);
+      opacity: 0;
+      filter: blur(5px);
+   }
+
+   100% {
+      transform: translateZ(0);
+      opacity: 1;
+      filter: blur(0px);
+   }
+}
+
+.anm-slide-in-fwd-center._watcher-view {
+   animation-name: slide-in-fwd-center;
+   animation-timing-function: cubic-bezier(0.250, 0.460, 0.450, 0.940);
+   animation-duration: .5s;
+   animation-fill-mode: both;
+}
+
+
+@keyframes slide-in-blurred-bottom {
+   0% {
+      transform: translateY(300px) scaleY(1.5) scaleX(0.2);
+      transform-origin: 50% 100%;
+      filter: blur(20px);
+      opacity: 0;
+   }
+
+   100% {
+      transform: translateY(0) scaleY(1) scaleX(1);
+      transform-origin: 50% 50%;
+      filter: blur(0);
+      opacity: 1;
+   }
+}
+
+.anm-slide-in-blurred-bottom._watcher-view {
+   animation-name: slide-in-blurred-bottom;
+   animation-duration: .25s;
+   animation-fill-mode: both;
+}
+
+@keyframes scale-up-ver-bottom {
+   0% {
+      opacity: 0;
+   }
+
+   1% {
+      transform: scaleY(0.4);
+      transform-origin: 0% 100%;
+      opacity: 1;
+   }
+
+   100% {
+      transform: scaleY(1);
+      transform-origin: 0% 100%;
+      opacity: 1;
+   }
+}
+
+.anm-scale-up-ver-bottom._watcher-view {
+   animation-name: scale-up-ver-bottom;
+   animation-timing-function: cubic-bezier(0.39, 0.575, 0.565, 1);
+   animation-duration: .5s;
+   animation-fill-mode: both;
+}

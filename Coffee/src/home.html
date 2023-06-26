@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<a href="#" data-popup="#popup" class="button">open</a>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
+	</div>
+	@@include('html/_preloader.htm',{})
+	@@include('html/_js.htm',{})
+</body>
+
+</html>
