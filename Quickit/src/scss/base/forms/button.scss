@@ -61,6 +61,12 @@
 		background: unset;
 		box-shadow: unset;
 		color: var(--secondary);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: transparent;
+			}
+		}
 	}
 
 

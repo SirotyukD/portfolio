@@ -140,7 +140,8 @@ const config = {
 				}, {
 					from: `${paths.src}/php`, to: `../`,
 					noErrorOnMissing: true
-				}, {
+				}
+				, {
 					from: `${paths.src}/favicon.ico`, to: `../`,
 					noErrorOnMissing: true
 				}

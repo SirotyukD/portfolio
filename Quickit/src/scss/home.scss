@@ -1,8 +1,10 @@
 //====================================================================================================
 .cover {
    position: relative;
-   @include adaptiveValue("padding-top", 225, 118);
+   padding-top: rem(120);
    padding-bottom: rem(30);
+   display: flex;
+   align-items: center;
 
    @media (min-width:$mobile) {
       margin-bottom: rem(30);
@@ -18,6 +20,7 @@
       top: 340px;
       left: 0;
       z-index: -1;
+      animation-delay: 2.25s;
 
       @media (min-width:$pc) {
          top: 0;
@@ -61,23 +64,32 @@
          font-size: rem(78);
          text-transform: unset;
       }
+
+      // &._watcher-view {
+      //    animation: text-focus-in .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+      // }
    }
 
    &__subtitle {
       font-size: rem(18);
       margin-bottom: rem(40);
       line-height: math.div(24, 18);
+      animation-delay: .5s;
+
 
       @media (min-width:$mobile) {
          font-size: rem(20);
          margin-bottom: rem(50);
          line-height: math.div(30, 20);
-
       }
 
       @media (min-width:$tablet) {
          margin-bottom: rem(60);
       }
+
+      // &._watcher-view {
+      //    animation: text-focus-in .5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both .5s;
+      // }
 
       span {
          display: none;
@@ -95,13 +107,14 @@
       align-items: center;
       gap: rem(20);
       margin-bottom: rem(40);
+      animation-duration: .35s !important;
+      animation-delay: 1s;
 
       @media (min-width:$mobile) {
          margin-bottom: rem(70);
          flex-direction: row;
          align-items: unset;
          gap: rem(40);
-
       }
 
       @media (min-width:$pc) {
@@ -109,13 +122,16 @@
          justify-content: flex-start;
       }
 
+      // &._watcher-view {
+      //    animation: text-focus-in .35s cubic-bezier(0.550, 0.085, 0.680, 0.530) both 1s;
+      // }
+
 
       .button--dark._bg._ic {
          padding: rem(15) rem(20);
 
          @media (min-width:$mobile) {
             padding: rem(20) rem(30);
-
          }
 
          img {
@@ -133,9 +149,6 @@
       position: relative;
       min-height: rem(260);
 
-      // position: absolute;
-      // top: 0;
-      // right: 0;
       @media (min-width:$mobile) {
          min-height: rem(350);
 
@@ -155,9 +168,10 @@
       }
 
       &--first {
-         opacity: 1;
          top: rem(20);
          right: 75%;
+         animation-delay: 1s;
+         // animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1s;
 
          @media (min-width:$mobile) {
             top: 0;
@@ -172,10 +186,12 @@
       }
 
       &--second {
-         opacity: 1;
          top: rem(120);
          left: 50%;
-         transform: translateX(-50%);
+         transform: translateX(-50%) !important;
+         animation-delay: 1.25s;
+
+         // animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1.25s;
 
          @media (min-width:$mobile) {
             top: rem(130);
@@ -190,10 +206,15 @@
       &--third {
          display: none;
 
+
+         // animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 2s;
+
          @media (min-width:$mobile) {
             display: block;
             top: rem(50);
             left: rem(-35);
+            animation-delay: 2s;
+
          }
 
          @media (min-width:$pc) {
@@ -203,9 +224,12 @@
       }
 
       &--fourth {
-         opacity: 1;
          top: 0;
          left: 93%;
+         animation-delay: 1.75s;
+
+
+         // animation: slide-in-fwd-center 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both 1.75s;
 
          @media (min-width:$mobile) {
             top: rem(50);
@@ -244,6 +268,10 @@
       @media (min-width:$mobile) {
          margin-bottom: rem(40);
       }
+
+      // &._watcher-view {
+      //    animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      // }
    }
 
    &__items {
@@ -272,7 +300,10 @@
          gap: rem(20);
          min-height: rem(102);
          width: calc(33.333% - rem(20));
+      }
 
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
       }
    }
 
@@ -301,7 +332,6 @@
       left: 0;
       bottom: rem(-95);
       z-index: -1;
-
    }
 
    &__container {
@@ -312,13 +342,14 @@
 
    &__image-ibg {
       padding-bottom: 68.75%;
-
-
       filter: drop-shadow(-8px -8px 0px rgba(0, 0, 0, 0.15)) drop-shadow(8px 8px 0px rgba(31, 32, 37, 0.15)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4));
+
+      // &._watcher-view {
+      //    animation: scale-up-ver-bottom 0.5s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      // }
 
       @media (min-width:$mobile) {
          filter: drop-shadow(-16px -16px 0px rgba(0, 0, 0, 0.5)) drop-shadow(20px 20px 100px rgba(0, 0, 0, 0.4)) drop-shadow(16px 16px 0px rgba(0, 0, 0, 0.5));
-
       }
 
    }
@@ -355,6 +386,10 @@
          text-align: left;
          align-self: center;
       }
+
+      // &._watcher-view {
+      //    animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      // }
    }
 
    &__prev {}
@@ -391,12 +426,17 @@
       width: rem(175);
       height: rem(162);
       margin: 0 auto;
+      animation-delay: .25s;
 
       @media (min-width:$tablet) {
          width: rem(308);
          height: rem(284);
          margin: unset;
       }
+
+      // &._watcher-view {
+      //    animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both .25s;
+      // }
    }
 }
 
@@ -437,6 +477,10 @@
       @media (min-width:$pc) {
          flex: 0 0 rem(370);
 
+      }
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
       }
 
    }
@@ -482,6 +526,10 @@
       @media (min-width:$pc) {
          padding-bottom: 53%;
       }
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      }
    }
 }
 
@@ -501,13 +549,21 @@
 
    &__container {}
 
-   &__prev {}
+   &__prev {
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      }
+   }
 
    &__title {
       margin-bottom: rem(30);
 
       @media (min-width:$mobile) {
          margin-bottom: rem(40);
+      }
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
       }
 
       span {
@@ -539,11 +595,17 @@
       @media (min-width:$tablet) {
          max-width: rem(470);
       }
+
+
    }
 
    &__cnt-item {
       padding: rem(5) rem(20);
       position: relative;
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      }
 
       &::before,
       &::after {
@@ -590,6 +652,10 @@
       @media (min-width:$tablet) {
          margin: 0;
          padding-bottom: 37%;
+      }
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
       }
    }
 }
@@ -692,6 +758,10 @@
          margin-bottom: rem(25);
       }
 
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+      }
+
       span {
          color: var(--inverse);
       }
@@ -708,6 +778,10 @@
 
       @media (min-width:$tablet) {
          margin-bottom: rem(60);
+      }
+
+      &._watcher-view {
+         animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
       }
    }
 
@@ -1128,6 +1202,11 @@
 
       @media (min-width:$mobile) {
          margin-bottom: rem(60);
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: rem(40);
+         flex-wrap: wrap;
       }
 
       @media (min-width:$tablet) {
@@ -1188,6 +1267,7 @@
 
       @media (any-hover: hover) {
          &:hover {
+            transform: scale(1.01);
             box-shadow: 10px 10px 30px rgba(31, 32, 37, 0.25);
          }
       }

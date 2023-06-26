@@ -1,5 +1,1 @@
-<svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.5" width="24" height="24" fill="white" fill-opacity="0.1"/>
-<path fill-rule="evenodd" clip-rule="evenodd" d="M10.0285 7.52925C10.2889 7.2689 10.711 7.2689 10.9713 7.52925L14.9713 11.5292C15.2317 11.7896 15.2317 12.2117 14.9713 12.4721L10.9713 16.4721C10.711 16.7324 10.2889 16.7324 10.0285 16.4721C9.76816 16.2117 9.76816 15.7896 10.0285 15.5292L13.5571 12.0007L10.0285 8.47206C9.76816 8.21171 9.76816 7.7896 10.0285 7.52925Z" fill="white"/>
-<rect x="1" y="0.5" width="23" height="23" stroke="white" stroke-opacity="0.1"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" fill="none" xmlns:v="https://vecta.io/nano"><g fill="#fff"><path fill-opacity=".1" d="M.5 0h24v24H.5z"/><path fill-rule="evenodd" d="M10.029 7.529c.26-.26.683-.26.943 0l4 4c.26.26.26.683 0 .943l-4 4c-.26.26-.682.26-.943 0s-.26-.683 0-.943l3.529-3.528-3.529-3.529c-.26-.26-.26-.682 0-.943z"/></g><path stroke="#fff" stroke-opacity=".1" d="M1 .5h23v23H1z"/></svg>
