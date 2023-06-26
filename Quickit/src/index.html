@@ -1,205 +1,676 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Layout «NEW_PROJECT_NAME»</title>
-</head>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"HomePage"
+})
 
 <body>
-	<div class="rootpage">
-		<h1>Layout «NEW_PROJECT_NAME»</h1>
-		<div class="rootpage__info">
-			<h2> <b> Project description:</b></h2>
-			<p><b>In this project was done:</b></p>
-			<ul>
-				<li>- layout of one page, which contains header, burger menu, 9 sections and footer
-				</li>
-				<li>- two sliders
-				</li>
-				<li>- one form
-				</li>
-				<li>- one popup
-				</li>
-				<li>- validation of html and css is done
-				</li>
-				<li> - all images are optimized and converted to WebP format (this image format is displayed only in
-					those
-					browsers that support it, otherwise PNG/JPEG is displayed)
-				</li>
-				<li> - favicon generated and connected
-				</li>
-				<li> - css and js files optimized and minified
-				</li>
-			</ul>
-		</div>
-		<h2>Default components here:</h2>
-		<ol class="rootpage__list">
-			<li> <a target="_blank" href="def-comp.html">Components</a>
-			</li>
-		</ol>
-		<h2>Ready to use HTML-pages:</h2>
-		<ol class="rootpage__list">
-			<li><a target="_blank" href="home.html">Main</a></li>
-		</ol>
-		<h2>Popups:</h2>
-		<ul class="rootpage__list">
-			<!-- <li>There are not popups</a></li> -->
-			<li><a target="_blank" href="./index.html#popup" class="link">Popup with Form</a></li>
-			</ol>
-			<div class="rootpage__tnx">
-				<h2>Thanks for ordering!</h2>
-				<p>I will be glad to have a good response.</p>
-				<p>Contact me again!</p>
-			</div>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section data-fullscreen class="cover">
+				<picture class="cover__picture anm-blink" data-watch-once data-watch data-animated>
+					<source media="(min-width:1199.99px)" data-srcset="@img/cover-bg--pc.png">
+					<source media="(min-width:767.99px)" data-srcset="@img/cover-bg--tab.png">
+					<source media="(min-width:0px)" data-srcset="@img/cover-bg--tab.png">
+					<img data-src="@img/cover-bg--tab.png" alt="background">
+				</picture>
+				<div class="cover__container">
+					<div class="cover__cnt">
+						<h1 class="cover__title -title text-focus-in" data-watch-once data-watch data-animated>Welcome to the
+							Future of Landings</h1>
+						<div class="cover__subtitle text-focus-in" data-watch-once data-watch data-animated>
+							Create screens right in your Figma. Connect different blocks and create awesome landings.
+							<span>Yes, it
+								just takes a few minutes!</span>
+						</div>
+						<div class="cover__buttons text-focus-in" data-watch-once data-watch data-animated>
+							<a data-popup="#popup" href="#" class="button _bg">Request a demo</a>
+							<a href="#" class="button button--dark _bg _ic"><img data-src="@img/icons/play.svg" alt="arrow">
+								<span>Watch video</span></a>
+						</div>
+					</div>
+					<div class="cover__images">
+						<picture class="cover__image cover__image--first anm-slide-in-fwd-center" data-watch-once data-watch
+							data-animated>
+							<source media="(min-width:767.99px)" data-srcset="@img/cover-img1--pc.jpg">
+							<source media="(min-width:0px)" data-srcset="@img/cover-img1.jpg">
+							<img data-src="@img/cover-img1.jpg" alt="background">
+						</picture>
+						<picture class="cover__image cover__image--second anm-slide-in-fwd-center" data-watch-once data-watch
+							data-animated>
+							<source media="(min-width:767.99px)" data-srcset="@img/cover-img2--pc.jpg">
+							<source media="(min-width:0px)" data-srcset="@img/cover-img2.jpg">
+							<img data-src="@img/cover-img2.jpg" alt="background">
+						</picture>
+						<picture class="cover__image cover__image--third anm-slide-in-fwd-center" data-watch-once data-watch
+							data-animated>
+							<!-- <source media="(min-width:767.99px)" data-srcset="@img/cover-img3--pc.jpg"> -->
+							<source media="(min-width:0px)" data-srcset="@img/cover-img3--pc.jpg">
+							<img data-src="@img/cover-img3--pc.jpg" alt="background">
+						</picture>
+						<picture class="cover__image cover__image--fourth anm-slide-in-fwd-center" data-watch-once data-watch
+							data-animated>
+							<source media="(min-width:767.99px)" data-srcset="@img/cover-img4--pc.jpg">
+							<source media="(min-width:0px)" data-srcset="@img/cover-img4.jpg">
+							<img data-src="@img/cover-img4.jpg" alt="background">
+						</picture>
+					</div>
+				</div>
+			</section>
+			<section class="trust">
+				<div class="trust__container">
+					<h5 class="trust__title -subtitle text-focus-in" data-watch-threshold=".5" data-watch-once data-watch
+						data-animated>
+						Trusted by the fastest growing companies</h5>
+					<div class="trust__items">
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/figma.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/figma--mob.svg">
+								<img data-src="@img/icons/figma--mob.svg" alt="Figma">
+							</picture>
+							<p class="trust__item-name">Figma</p>
+						</div>
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/sketch.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/sketch--mob.svg">
+								<img data-src="@img/icons/sketch--mob.svg" alt="Sketch">
+							</picture>
+							<p class="trust__item-name">Sketch</p>
+						</div>
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/pinterest.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/pinterest--mob.svg">
+								<img data-src="@img/icons/pinterest--mob.svg" alt="Pinterest">
+							</picture>
+							<p class="trust__item-name">Pinterest</p>
+						</div>
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/dribble.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/dribble--mob.svg">
+								<img data-src="@img/icons/dribble--mob.svg" alt="Dribble">
+							</picture>
+							<p class="trust__item-name">Dribble</p>
+						</div>
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/behanse.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/behanse--mob.svg">
+								<img data-src="@img/icons/behanse--mob.svg" alt="Behanse">
+							</picture>
+							<p class="trust__item-name">Behanse</p>
+						</div>
+						<div class="trust__item anm-slide-in-blurred-bottom" data-watch-threshold=".5" data-watch-once
+							data-watch data-animated>
+							<picture class="trust__item-img">
+								<source media="(min-width:767.99px)" data-srcset="@img/icons/github.svg">
+								<source media="(min-width:0px)" data-srcset="@img/icons/github--mob.svg">
+								<img data-src="@img/icons/github--mob.svg" alt="Github">
+							</picture>
+							<p class="trust__item-name">Github</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section class="feature">
+				<picture class="feature__bg anm-blink" data-watch-threshold="1" data-watch-once data-watch data-animated>
+					<source media="(min-width:767.99px)" data-srcset="@img/feature-bg--tab.png">
+					<source media="(min-width:0px)" data-srcset="@img/feature-bg--mob.png">
+					<img data-src="@img/feature-bg--mob.png" alt="background">
+				</picture>
+				<div class="feature__container">
+					<div class="feature__image-ibg anm-scale-up-ver-bottom" data-watch-threshold=".25" data-watch-once
+						data-watch data-animated><img data-src="@img/feature.jpg" alt="dashboard"></div>
+				</div>
+			</section>
+			<section class="information">
+				<div class="information__container">
+					<div class="information__cnt anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated>
+						<p class="information__prev  -subtext">create layouts</p>
+						<h2 class="information__title -title">Move fast, stay aligned, and build better -
+							<span>together</span>
+						</h2>
+						<p class="information__txt">This resource contains all viewports versions for a landing page template
+							based on components.</p>
+					</div>
+					<div class="information__image-ibg anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated><img data-src="@img/information-img.svg" alt="information"></div>
+				</div>
+
+			</section>
+			<section class="analytics">
+				<div class="analytics__container">
+					<div class="analytics__cnt anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated>
+						<div class="analytics__prev -subtext">
+							<div class="analytics__prev-icon -subtext__icon">
+								<img data-src="@img/icons/list.svg" alt="list">
+							</div>
+							<div class="analytics__prev-txt ">analytics</div>
+						</div>
+						<h3 class="analytics__title -title">Create, collaborate your work in 1 place</h3>
+						<p class="analytics__txt">
+							Save time and coordinate with your team and push projects forward with the tools you use every day
+							– all within Quickit.
+						</p>
+					</div>
+					<div class="analytics__image-ibg -ibg anm-slide-in-blurred-bottom" data-watch-threshold="1"
+						data-watch-once data-watch data-animated><img data-src="@img/analytics-img.jpg" alt="analytics"></div>
+				</div>
+			</section>
+			<section class="advantages">
+				<div class="advantages__container">
+					<p class="advantages__prev -subtext anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated>
+						key benefits</p>
+					<h2 class="advantages__title -title anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated>
+						Your business will reach <br><span>unprecedented heights</span>
+					</h2>
+					<div class="advantages__cnt">
+						<div class="advantages__cnt-items">
+							<div class="advantages__cnt-item active anm-slide-in-blurred-bottom" data-watch-threshold="1"
+								data-watch-once data-watch data-animated>
+								<h5 class="advantages__cnt-title -subtitle">Be Organized</h5>
+								<p class="advantages__cnt-txt">Every team has a unique process for shipping software. Use an
+									out-of-the-box workflow, or create one to match the way your team works.</p>
+							</div>
+							<div class="advantages__cnt-item anm-slide-in-blurred-bottom" data-watch-threshold="1"
+								data-watch-once data-watch data-animated>
+								<h5 class="advantages__cnt-title -subtitle">Stay Focused</h5>
+								<p class="advantages__cnt-txt">Estimations help your team become more accurate and efficient.
+									Use story points, hours, t-shirt sizes, or your own estimation technique.</p>
+							</div>
+							<div class="advantages__cnt-item anm-slide-in-blurred-bottom" data-watch-threshold="1"
+								data-watch-once data-watch data-animated>
+								<h5 class="advantages__cnt-title -subtitle">Get in Sync</h5>
+								<p class="advantages__cnt-txt">Order user stories, issues, and bugs in your product backlog with
+									simple drag and drop prioritization. Ensure stories that deliver the most customer value.
+								</p>
+							</div>
+						</div>
+						<div class="advantages__cnt-image -ibg_contain anm-slide-in-blurred-bottom" data-watch-threshold="1"
+							data-watch-once data-watch data-animated><img data-src="@img/work.svg" alt="work"></div>
+					</div>
+				</div>
+			</section>
+			<section class="cta">
+				<div class="cta__container">
+					<div class="cta__slider swiper">
+						<div class="cta__wrapper swiper-wrapper">
+							<div class="cta__slide swiper-slide">
+								<picture class="cta__slide-picture">
+									<source media="(min-width:767.99px)" data-srcset="@img/slide-bg--tab.png">
+									<source media="(min-width:0px)" data-srcset="@img/slide-bg--mob.png">
+									<img data-src="@img/slide-bg--mob.png" alt="background">
+								</picture>
+								<div class="cta__slide-cnt">
+									<h2 class="cta__slide-title -title">Built for Development and Design Teams</h2>
+									<p class="cta__slide-txt">Subscript is built to help finance teams get more accurate revenue
+										data, faster, way in-depth, and with a lot less effort. </p>
+									<a href="#" class="cta__slide-btn button _bg _ic">Get Early Access<img
+											data-src="@img/icons/arr-in-box.svg" alt="arrow">
+									</a>
+								</div>
+
+							</div>
+							<div class="cta__slide swiper-slide">
+								<picture class="cta__slide-picture">
+									<source media="(min-width:767.99px)" data-srcset="@img/slide-bg--tab.png">
+									<source media="(min-width:0px)" data-srcset="@img/slide-bg--mob.png">
+									<img data-src="@img/slide-bg--mob.png" alt="background">
+								</picture>
+								<div class="cta__slide-cnt">
+									<h2 class="cta__slide-title -title">Built for Development and Design Teams</h2>
+									<p class="cta__slide-txt">Subscript is built to help finance teams get more accurate revenue
+										data, faster, way in-depth, and with a lot less effort. </p>
+									<a href="#" class="cta__slide-btn button _bg _ic">Get Early Access<img
+											data-src="@img/icons/arr-in-box.svg" alt="arrow">
+									</a>
+								</div>
+
+							</div>
+							<div class="cta__slide swiper-slide">
+								<picture class="cta__slide-picture">
+									<source media="(min-width:767.99px)" data-srcset="@img/slide-bg--tab.png">
+									<source media="(min-width:0px)" data-srcset="@img/slide-bg--mob.png">
+									<img data-src="@img/slide-bg--mob.png" alt="background">
+								</picture>
+								<div class="cta__slide-cnt">
+									<h2 class="cta__slide-title -title">Built for Development and Design Teams</h2>
+									<p class="cta__slide-txt">Subscript is built to help finance teams get more accurate revenue
+										data, faster, way in-depth, and with a lot less effort. </p>
+									<a href="#" class="cta__slide-btn button _bg _ic">Get Early Access<img
+											data-src="@img/icons/arr-in-box.svg" alt="arrow">
+									</a>
+								</div>
+
+							</div>
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
+				</div>
+			</section>
+			<section class="graph">
+				<div class="graph__container">
+					<h2 class="graph__title -title anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once
+						data-watch data-animated>Use Quickit to simplify <span>building and
+							maintaining layouts</span>
+					</h2>
+					<p class="graph__txt anm-slide-in-blurred-bottom" data-watch-threshold="1" data-watch-once data-watch
+						data-animated>
+						You can decide how you are working as a team first and then let the software work around you. The pace
+						of delivery from idea to reality has exploded.
+					</p>
+					<div class="graph__box">
+						<div class="graph__slider swiper">
+							<div class="graph__wrapper swiper-wrapper">
+								<div class="graph__slide swiper-slide">
+									<div class="graph__slide-graph">
+										<div class="graph__slide-items">
+											<img data-src="@img/graph-lines.svg" alt="lines" class="graph__slide-bg">
+											<picture class="graph__slide-zone">
+												<source media="(min-width:991.99px)" data-srcset="@img/zone--pc.svg">
+												<source media="(min-width:767.99px)" data-srcset="@img/zone--tab.svg">
+												<source media="(min-width:0px)" data-srcset="@img/zone--mob.svg">
+												<img data-src="@img/zone--mob.svg" alt="background">
+											</picture>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 140px;" class="graph__slide-blue"></div>
+													<div style="height: 68px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jan 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 75px;" class="graph__slide-blue"></div>
+													<div style="height: 40px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Feb 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 86px;" class="graph__slide-blue"></div>
+													<div style="height: 71px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Mar 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 177px;" class="graph__slide-blue"></div>
+													<div style="height: 117px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Apr 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">May 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jun 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jul 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 181px;" class="graph__slide-blue"></div>
+													<div style="height: 124px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Aug 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 89px;" class="graph__slide-blue"></div>
+													<div style="height: 50px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Sep 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Oct 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Nov 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Dec 2020</div>
+											</div>
+										</div>
+										<div class="graph__slide-inf">
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Figma</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Sketch</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Tasks</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="graph__slide swiper-slide">
+									<div class="graph__slide-graph">
+										<div class="graph__slide-items">
+											<img data-src="@img/graph-lines.svg" alt="lines" class="graph__slide-bg">
+											<!-- <img data-src="@img/zone.svg" alt="lines" class="graph__slide-zone"> -->
+											<picture class="graph__slide-zone">
+												<source media="(min-width:991.99px)" data-srcset="@img/zone--pc.svg">
+												<source media="(min-width:767.99px)" data-srcset="@img/zone--tab.svg">
+												<source media="(min-width:0px)" data-srcset="@img/zone--mob.svg">
+												<img data-src="@img/zone--mob.svg" alt="background">
+											</picture>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 140px;" class="graph__slide-blue"></div>
+													<div style="height: 68px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jan 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 75px;" class="graph__slide-blue"></div>
+													<div style="height: 40px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Feb 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 86px;" class="graph__slide-blue"></div>
+													<div style="height: 71px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Mar 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 177px;" class="graph__slide-blue"></div>
+													<div style="height: 117px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Apr 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">May 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jun 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jul 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 181px;" class="graph__slide-blue"></div>
+													<div style="height: 124px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Aug 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 89px;" class="graph__slide-blue"></div>
+													<div style="height: 50px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Sep 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Oct 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Nov 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Dec 2020</div>
+											</div>
+										</div>
+										<div class="graph__slide-inf">
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Figma</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Sketch</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Tasks</p>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="graph__slide swiper-slide">
+									<div class="graph__slide-graph">
+										<div class="graph__slide-items">
+											<img data-src="@img/graph-lines.svg" alt="lines" class="graph__slide-bg">
+											<!-- <img data-src="@img/zone.svg" alt="lines" class="graph__slide-zone"> -->
+											<picture class="graph__slide-zone">
+												<source media="(min-width:991.99px)" data-srcset="@img/zone--pc.svg">
+												<source media="(min-width:767.99px)" data-srcset="@img/zone--tab.svg">
+												<source media="(min-width:0px)" data-srcset="@img/zone--mob.svg">
+												<img data-src="@img/zone--mob.svg" alt="background">
+											</picture>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 140px;" class="graph__slide-blue"></div>
+													<div style="height: 68px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jan 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 75px;" class="graph__slide-blue"></div>
+													<div style="height: 40px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Feb 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 86px;" class="graph__slide-blue"></div>
+													<div style="height: 71px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Mar 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 177px;" class="graph__slide-blue"></div>
+													<div style="height: 117px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Apr 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">May 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jun 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Jul 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 181px;" class="graph__slide-blue"></div>
+													<div style="height: 124px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Aug 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 89px;" class="graph__slide-blue"></div>
+													<div style="height: 50px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Sep 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 144px;" class="graph__slide-blue"></div>
+													<div style="height: 85px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Oct 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 91px;" class="graph__slide-blue"></div>
+													<div style="height: 72px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Nov 2020</div>
+											</div>
+											<div class="graph__slide-item">
+												<div class="graph__slide-lines">
+													<div style="height: 123px;" class="graph__slide-blue"></div>
+													<div style="height: 63px;" class="graph__slide-orangge"></div>
+												</div>
+												<div class="graph__slide-date">Dec 2020</div>
+											</div>
+										</div>
+										<div class="graph__slide-inf">
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Figma</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Sketch</p>
+											</div>
+											<div class="graph__slide-prod">
+												<div class="graph__slide-dot"></div>
+												<p class="graph__slide-title">Tasks</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="swiper-pagination"></div>
+						</div>
+					</div>
+
+				</div>
+			</section>
+			<section class="posts">
+				<div class="posts__container">
+					<div class="posts__header">
+						<h2 class="posts__title -title">Read our resources</h2>
+						<a href="#" class="posts__view button _link _ic">View Resources <img data-src="@img/icons/arr--bg.svg"
+								alt="arrow"></a>
+					</div>
+					<div class="posts__items">
+						<div class="posts__item item-post">
+							<a href="#" class="item-post__image-ibg"><img data-src="@img/post1.jpg"
+									alt="The guide to producs analytics"></a>
+							<div class="item-post__category">
+								<div class="item-post__category-icon -ibg_contain"><img data-src="@img/icons/book.svg"
+										alt="book">
+								</div>
+								<a href="#" class="item-post__category-name link">Article</a>
+							</div>
+							<a href="#" class="item-post__title">The guide to product
+								analytics</a>
+							<a href="#" class="item-post__link button _link _ic">Read Article <img
+									data-src="@img/icons/arr--bg.svg" alt="arrow"></a>
+						</div>
+						<div class="posts__item item-post">
+							<a href="#" class="item-post__image-ibg"><img data-src="@img/post2.jpg"
+									alt="The guide to producs analytics"></a>
+							<div class="item-post__category">
+								<div class="item-post__category-icon -ibg_contain"><img data-src="@img/icons/book.svg" alt="">
+								</div>
+								<a href="#" class="item-post__category-name link">Blog</a>
+							</div>
+							<a href="#" class="item-post__title">Using data for successful decision making</a>
+							<a href="#" class="item-post__link button _link _ic">Read Post <img
+									data-src="@img/icons/arr--bg.svg" alt="arrow"></a>
+						</div>
+						<div class="posts__item item-post pc">
+							<a href="#" class="item-post__image-ibg"><img data-src="@img/post3.jpg"
+									alt="The guide to producs analytics"></a>
+							<div class="item-post__category">
+								<div class="item-post__category-icon -ibg_contain"><img data-src="@img/icons/book.svg" alt="">
+								</div>
+								<a href="#" class="item-post__category-name link">video</a>
+							</div>
+							<a href="#" class="item-post__title">Quickit: What you probably didn’t know</a>
+							<a href="#" class="item-post__link button _link _ic">Watch Video<img
+									data-src="@img/icons/arr--bg.svg" alt="arrow"></a>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+		@@include('html/_popup.htm',{})
 	</div>
+	@@include('html/_js.htm',{})
 </body>
-<style>
-	@charset "UTF-8";
-	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
-
-	*,
-	*::before,
-	*::after {
-		padding: 0px;
-		margin: 0px;
-		border: 0px;
-		box-sizing: border-box;
-	}
-
-	html,
-	body {
-		height: 100%;
-		margin: 0;
-		padding: 0;
-		min-width: 320px;
-		width: 100%;
-		color: #0C151C;
-		background-color: #D2D2D4;
-	}
-
-	body {
-		font-family: Montserrat;
-		font-size: 100%;
-		line-height: 1;
-		font-size: 1rem;
-	}
-
-	a {
-		text-decoration: underline;
-		color: #0C151C
-	}
-
-	a:visited {
-		text-decoration: underline;
-		color: #0C151C;
-	}
-
-	a:hover {
-		text-decoration: none;
-	}
-
-	ul li {
-		list-style: none;
-	}
-
-	img {
-		vertical-align: top;
-	}
-
-	.wrapper {
-		width: 100%;
-		min-height: 100%;
-		overflow: hidden;
-	}
-
-	.rootpage {
-		padding: 50px;
-		display: flex;
-		flex-direction: column;
-		align-items: flex-start;
-	}
-
-	@media (max-width: 767px) {
-		.rootpage {
-			padding: 30px 15px;
-		}
-	}
-
-	h1 {
-		color: #16354D;
-		font-size: 2.5rem;
-		margin: 0px 0px 1.25rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h1 {
-			font-size: 1.85rem;
-			margin: 0px 0px 1.25rem 0px;
-		}
-	}
-
-	h2 {
-		color: #686461;
-		font-size: 1.25rem;
-		margin: 0px 0px 1rem 0px;
-	}
-
-	@media (max-width: 767px) {
-		h2 {
-			font-size: 1.125rem;
-			margin: 0px 0px 1rem 0px;
-		}
-	}
-
-	.rootpage__info {
-		line-height: 140%;
-		margin: 0px 0px 1.5rem 0px;
-	}
-
-	.rootpage__list {
-		margin: 0px 0px 2.25rem 1.25rem;
-	}
-
-	.rootpage__list li:not(:last-child) {
-		margin: 0px 0px 15px 0px;
-	}
-
-	.rootpage__contacts,
-	.rootpage__tnx {
-		border-radius: 200px;
-		padding: 20px 65px;
-		line-height: 140%;
-	}
-
-	@media (max-width: 767px) {
-
-		.rootpage__contacts,
-		.rootpage__tnx {
-			border-radius: 40px;
-			padding: 20px;
-		}
-	}
-
-	.rootpage__contacts {
-		background: #E4E5EA;
-
-	}
-
-	.rootpage__contacts a {
-		color: #ebe691;
-	}
-
-	.rootpage__tnx {
-		background: #16354D;
-		margin: 3rem 0px 1rem 0px;
-	}
-
-	.rootpage__tnx p,
-	.rootpage__tnx h2 {
-		color: #D2D2D4;
-	}
-</style>
 
 </html>
