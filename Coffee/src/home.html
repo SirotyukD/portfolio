@@ -1,19 +1,329 @@
 <!DOCTYPE html>
 <html lang="en">
 @@include('html/_head.htm',{
-"title":"HomePage"
+"title":"Coffee"
 })
 
 <body>
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<a href="#" data-popup="#popup" class="button">open</a>
+			<section class="cover">
+				<picture class="cover__picture-bg">
+					<source media="(min-width:1920.99px)" data-srcset="@img/cover-bg--4k.jpg">
+					<source media="(min-width:991.99px)" data-srcset="@img/cover-bg--pc.jpg">
+					<source media="(min-width:767.99px)" data-srcset="@img/cover-bg--tab.jpg">
+					<source media="(min-width:0px)" data-srcset="@img/cover-bg--mob.jpg">
+					<img data-src="@img/cover-bg--mob.jpg" alt="background">
+				</picture>
+				<div class="cover__container">
+					<div class="cover__wrap">
+						<p class="cover__subtxt">
+							We’ve got
+							your
+							morning
+							covered
+							with</p>
+						<h1 class="cover__title -title">
+							Coffee
+						</h1>
+						<p class="cover__txt">
+							It is
+							best to
+							start
+							your day
+							with a
+							cup of
+							coffee.
+							Discover
+							the
+							best
+							flavours
+							coffee
+							you will
+							ever
+							have. We
+							provide
+							the best
+							for our
+							customers.
+						</p>
+						<a data-popup="#popup" href="#" class="cover__btn button">Order
+							Now</a>
+					</div>
+				</div>
+			</section>
+			<section class="about">
+				<div class="about__container">
+					<div class="about__cnt">
+						<h2 class="about__title -title">
+							Discover
+							the best
+							coffee
+						</h2>
+						<p class="about__txt">
+							Bean
+							Scene is
+							a coffee
+							shop that
+							provides
+							you with
+							quality
+							coffee
+							that
+							helps
+							boost
+							your
+							productivity
+							and helps
+							build
+							your
+							mood.
+							Having a
+							cup of
+							coffee is
+							good, but
+							having a
+							cup
+							of real
+							coffee is
+							greater.
+							There is
+							no doubt
+							that you
+							will
+							enjoy
+							this
+							coffee
+							more than
+							others
+							you
+							have ever
+							tasted.
+						</p>
+						<a href="#" class="about__btn button">Learn
+							More</a>
+
+					</div>
+					<div class="about__image -ibg_contain">
+						<img data-src="@img/coffee-cup.png" alt="coffee-cup">
+					</div>
+				</div>
+			</section>
+			<section class="products">
+				<picture class="products__bg-img products__bg-img--left">
+					<source media="(min-width:767.99px)" data-srcset="@img/coffee_blast--left.png">
+					<source media="(min-width:0px)" data-srcset="@img/coffee_blast--left-mob.png">
+					<img data-src="@img/coffee_blast--left.png" alt="coffee_blast">
+				</picture>
+				<picture class="products__bg-img products__bg-img--right">
+					<source media="(min-width:767.99px)" data-srcset="@img/coffee_blast--right.png">
+					<source media="(min-width:0px)" data-srcset="@img/coffee_blast--right-mob.png">
+					<img data-src="@img/coffee_blast--left.png" alt="coffee_blast">
+				</picture>
+
+				<div class="products__container">
+					<h2 class="products__title -title">
+						Enjoy a new blend of coffee style
+					</h2>
+					<p class="products__txt">
+						Explore all flavours of coffee with us. There is always a new cup worth experiencing
+					</p>
+					<div class="products__items">
+						<article class="products__item item-product">
+							<a href="#" class="item-product__image-ibg"><img data-src="@img/product1.jpg" alt="Cappuccino"></a>
+							<h5 class="item-product__title">
+								<a href="#" class="item-product__title-link">Cappuccino</a>
+							</h5>
+							<p class="item-product__txt">Coffee 50% | Milk 50%</p>
+							<div class="item-product__price">$8.50</div>
+							<button class="item-product__btn button">Order Now</button>
+						</article>
+						<article class="products__item item-product">
+							<a href="#" class="item-product__image-ibg"><img data-src="@img/product2.jpg" alt="Chai Latte"></a>
+							<h5 class="item-product__title">
+								<a href="#" class="item-product__title-link">Chai Latte</a>
+							</h5>
+							<p class="item-product__txt">Coffee 50% | Milk 50%</p>
+							<div class="item-product__price">$8.50</div>
+							<button class="item-product__btn button">Order Now</button>
+						</article>
+						<article class="products__item item-product">
+							<a href="#" class="item-product__image-ibg"><img data-src="@img/product3.jpg" alt="Macchiato"></a>
+							<h5 class="item-product__title">
+								<a href="#" class="item-product__title-link">Macchiato</a>
+							</h5>
+							<p class="item-product__txt">Coffee 50% | Milk 50%</p>
+							<div class="item-product__price">$8.50</div>
+							<button class="item-product__btn button">Order Now</button>
+						</article>
+						<article class="products__item item-product">
+							<a href="#" class="item-product__image-ibg"><img data-src="@img/product4.jpg" alt="Expresso"></a>
+							<h5 class="item-product__title">
+								<a href="#" class="item-product__title-link">Expresso</a>
+							</h5>
+							<p class="item-product__txt">Coffee 50% | Milk 50%</p>
+							<div class="item-product__price">$8.50</div>
+							<button class="item-product__btn button">Order Now</button>
+						</article>
+					</div>
+				</div>
+			</section>
+			<section class="adv">
+				<div class="adv__container">
+					<h2 class="adv__title -title">Why are we different?</h2>
+					<p class="adv__txt">We don’t just make your coffee, we make your day!</p>
+					<div class="adv__items">
+						<div class="adv__item item-adv">
+							<div class="item-adv__image-ibg"><img data-src="@img/adv1.png" alt="Supreme Beans"></div>
+							<h4 class="item-adv__title -title">
+								Supreme Beans
+							</h4>
+							<p class="item-adv__txt">Beans that provides
+								great taste</p>
+						</div>
+						<div class="adv__item item-adv">
+							<div class="item-adv__image-ibg"><img data-src="@img/adv2.png" alt="High Quality"></div>
+							<h4 class="item-adv__title -title">
+								High Quality
+							</h4>
+							<p class="item-adv__txt">We provide the
+								highest quality</p>
+						</div>
+						<div class="adv__item item-adv">
+							<div class="item-adv__image-ibg"><img data-src="@img/adv3.png" alt="Extraordinary"></div>
+							<h4 class="item-adv__title -title">
+								Extraordinary
+							</h4>
+							<p class="item-adv__txt">Coffee like you have
+								never tasted</p>
+						</div>
+						<div class="adv__item item-adv">
+							<div class="item-adv__image-ibg"><img data-src="@img/adv4.png" alt="Affordable Price"></div>
+							<h4 class="item-adv__title -title">
+								Affordable Price
+							</h4>
+							<p class="item-adv__txt">Our Coffee prices are
+								easy to afford</p>
+						</div>
+					</div>
+					<div class="adv__inf inf-adv">
+						<p class="inf-adv__txt">Great ideas start with great coffee, Lets help you achieve that</p>
+						<h4 class="inf-adv__title -title">Get started today.</h4>
+						<a href="#" class="inf-adv__btn button">Join Us</a>
+					</div>
+				</div>
+			</section>
+			<section class="cta">
+				<picture class="cta__picture-bg">
+					<source media="(min-width:0px)" data-srcset="@img/cta-bg.jpg">
+					<img data-src="@img/cta-bg.jpg" alt="coffee">
+				</picture>
+				<picture class="cta__coffee-bean">
+					<source media="(min-width:991.99px)" data-srcset="@img/coffee_bean.png">
+					<source media="(min-width:0px)" data-srcset="@img/coffee_bean--mob.png">
+					<img data-src="@img/coffee_bean.png" alt="coffee_bean">
+				</picture>
+				<div class="cta__container">
+					<div class="cta__inf">
+						<h2 class="cta__title -title">Get a chance to have an
+							Amazing morning</h2>
+						<p class="cta__txt">We are giving you are one time opportunity to
+							experience a better life with coffee.</p>
+						<a href="#" class="cta__btn button">Order Now</a>
+					</div>
+					<div class="cta__img">
+						<div class="cta__img-ibg -ibg_contain"><img data-src="@img/cup.png" alt="cup"></div>
+					</div>
+				</div>
+			</section>
+			<section class="fdb">
+				<picture class="fdb__img fdb__img_left">
+					<source media="(min-width:767.99px)" data-srcset="@img/fdb-bg2.png">
+					<source media="(min-width:0px)" data-srcset="@img/fdb-bg2--mob.png">
+					<img data-src="@img/fdb-bg1.png" alt="coffee_blast">
+				</picture>
+				<picture class="fdb__img fdb__img_right">
+					<source media="(min-width:767.99px)" data-srcset="@img/fdb-bg1.png">
+					<source media="(min-width:0px)" data-srcset="@img/fdb-bg1--mob.png">
+					<img data-src="@img/fdb-bg2.png" alt="coffee_blast">
+				</picture>
+				<div class="fdb__container">
+					<h2 class="fdb__title -title">Our coffee perfection feedback</h2>
+					<p class="fdb__txt">Our customers has amazing things to say about us</p>
+					<div class="fdb__slider">
+						<div class="slider-fdb__slider swiper">
+							<div class="slider-fdb__wrapper swiper-wrapper">
+								<div class="slider-fdb__slide swiper-slide">
+
+									<div class="slider-fdb__txt">
+										<div class="slider-fdb__icon">“</div>
+										Lorem Ipsum is simply dummy text of the printing and typesetting
+										industry.
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+										only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+										It was popularised in the 1960s with the release of Letraset.....
+									</div>
+									<p class="slider-fdb__author">Jonny Thomas</p>
+									<p class="slider-fdb__work">Project Manager</p>
+									<div class="slider-fdb__image-ibg"><img data-src="@img/user.jpg" alt="Jonny Thomas"></div>
+								</div>
+								<div class="slider-fdb__slide swiper-slide">
+
+									<div class="slider-fdb__txt">
+										<div class="slider-fdb__icon">“</div>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+										only five centuries, but also the leap into electronic typesetting,
+									</div>
+									<p class="slider-fdb__txt">Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+										Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown
+										printer took a galley of type and scrambled it to make a type specimen book. It has survived not
+										only five centuries, but also the leap into electronic typesetting, </p>
+									<p class="slider-fdb__author">Jonny Thomas</p>
+									<p class="slider-fdb__work">Project Manager</p>
+									<div class="slider-fdb__image-ibg"><img data-src="@img/user.jpg" alt="Jonny Thomas"></div>
+								</div>
+								<div class="slider-fdb__slide swiper-slide">
+
+									<div class="slider-fdb__txt">
+										<div class="slider-fdb__icon">“</div>
+										Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+									</div>
+									<p class="slider-fdb__author">Jonny Thomas</p>
+									<p class="slider-fdb__work">Project Manager</p>
+									<div class="slider-fdb__image-ibg"><img data-src="@img/user.jpg" alt="Jonny Thomas"></div>
+								</div>
+							</div>
+							<div class="slider-fdb__pagination swiper-pagination"></div>
+
+						</div>
+						<button title="button prev" type="button" class="slider-fdb__btn swiper-button-prev"></button>
+						<button title="button next" type="button" class="slider-fdb__btn swiper-button-next"></button>
+					</div>
+				</div>
+			</section>
+			<section class="subscribe">
+				<picture class="subscribe__picture-bg">
+					<source media="(min-width:0px)" data-srcset="@img/cta-bg.jpg">
+					<img data-src="@img/cta-bg.jpg" alt="coffee">
+				</picture>
+				<div class="subscribe__container">
+					<h2 class="subscribe__title -title">Subscribe to get the Latest News</h2>
+					<p class="subscribe__txt">Don’t miss out on our latest news, updates, tips and special offers</p>
+					<form class="subscribe__form" action="files/sendmail/sendmail.php" method="POST">
+						<input type="text" name="form[email]" data-error="Error" placeholder="Enter your mail"
+							class="subscribe__form-input input">
+						<button type="submit" class="subscribe__form-btn button">Subscribe</button>
+					</form>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 		@@include('html/_popup.htm',{})
 	</div>
-	@@include('html/_preloader.htm',{})
 	@@include('html/_js.htm',{})
 </body>
 

@@ -1,0 +1,5 @@
+{
+   "html.format.wrapLineLength": 120,
+   "editor.maxTokenizationLineLength": 500,
+   "editor.wordWrap": "on"
+}

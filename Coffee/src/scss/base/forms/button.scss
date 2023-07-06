@@ -18,8 +18,8 @@
 
 	@media (any-hover: hover) {
 		&:hover {
-			background-color: var(--inverse);
-			box-shadow: 0px 6px 12px 0px rgba(249, 192, 106, .75);
+			// background-color: var(--inverse);
+			box-shadow: 0px 6px 12px 3px rgba(249, 192, 106, .5);
 		}
 	}
 

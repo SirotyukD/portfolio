@@ -30,7 +30,9 @@ body {
 	color: $mainColor;
 	line-height: $line-height;
 	font-family: $fontFamily;
-	font-size: $fontSize;
+	// font-size: $fontSize;
+	@include adaptiveValue("font-size", 20, 16);
+	;
 	text-rendering: optimizeLegibility;
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;

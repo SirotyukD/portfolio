@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Components"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main class="page">
+			<section class="def-comp">
+				<div class="def-comp__container">
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Default components:
+						</h2>
+						<h1 class="-title">Title H1</h1>
+						<h2 class="-title">Title H2</h2>
+						<h3 class="-title">Title H3</h3>
+						<h4 class="-title">Title H4</h4>
+					</div>
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Text:
+						</h2>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque neque, ex unde alias saepe
+							voluptates ipsam
+							voluptatum modi praesentium corrupti iure rerum delectus magnam accusantium ipsum tenetur! Velit,
+							similique
+							inventore!
+						</p>
+					</div>
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Text link:
+						</h2>
+						<a href="#" class="-link">Read more</a>
+
+					</div>
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Buttons:
+						</h2>
+						<div class="def-comp__item-wrap">
+							<a href="#" class="button">Button</a>
+							<a href="#" class="button _lgh">Button</a>
+							<a href="#" class="button _lns">Button <img data-src="@img/icons/arrow.svg" alt="arrow"></a>
+
+						</div>
+					</div>
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Forms:
+						</h2>
+						<form action="files/sendmail/sendmail.php" data-ajax method="POST">
+							<input type="text" name="form[name]" data-error="Error" placeholder="Name" class="input">
+							<input type="email" name="form[email]" data-error="Error" placeholder="E-mail" class="input">
+							<button type="submit" class="button _fw _frm">Send</button>
+						</form>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+</body>
+@@include('html/_js.htm',{})
+
+<style>
+	.def-comp {
+		padding-top: 50px;
+		padding-bottom: 50px;
+	}
+
+	.def-comp__item {
+		margin-bottom: 50px;
+	}
+
+	.def-comp__item-wrap {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.def-comp__item-title {
+		margin-bottom: 30px;
+	}
+
+	form {
+		max-width: 500px;
+	}
+</style>
+
+</html>

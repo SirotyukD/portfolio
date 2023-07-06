@@ -1,4 +1,12 @@
 // Заголовки, загальні БЕМ блоки та інше...
+body {
+   background: #FFFEFC;
+   min-height: rem(2000);
+}
+
+section {
+   @include adaptiveValue("margin-bottom", 82, 50);
+}
 
 .-title {
    font-family: var(--fontTitle);
@@ -7,11 +15,11 @@
 }
 
 h1 {
-   @include adaptiveValue("font-size", 220, 70);
+   @include adaptiveValue("font-size", 220, 100);
 }
 
 h2 {
-   @include adaptiveValue("font-size", 54, 28);
+   @include adaptiveValue("font-size", 54, 26);
    margin-bottom: rem(16);
 }
 

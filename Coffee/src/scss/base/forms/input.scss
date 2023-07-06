@@ -14,13 +14,13 @@ textarea {
 	width: 100%;
 	display: inline-flex;
 	align-items: center;
-	padding: rem(10) rem(10) rem(10) rem(15);
-	background: var(--inverse);
-	border: 1px solid rgba(249, 192, 106, 0.42);
+	padding: rem(10) rem(10) rem(10) rem(26);
+	background: var(--yellow300);
 	min-height: rem(52);
-	color: var(--textColorMain);
+	color: var(--dark);
 	margin-bottom: rem(20);
-	border-radius: rem(8);
+	border-radius: 4px;
+	border: 1px solid rgba(249, 192, 106, 0.42);
 
 	@media (max-width:$mobile) {
 		min-height: rem(44);

@@ -1,0 +1,44 @@
+// ===============
+// colors palette
+// ===============
+:root {
+
+	//fonts
+	--fontMain: 'Poppins', sans-serif;
+	--fontTitle: 'Poppins', sans-serif;
+	--fontText: 'Poppins', sans-serif;
+	--fontAccent: 'Seaweed Script', cursive;
+
+	//colors
+	--light: #fff;
+	--dark100: #525D73;
+	--dark200: #424D65;
+	--dark300: #292E37;
+	--dark400: #2A2E36;
+	--blue100: #F3F8FF;
+	--blue400: #00D9FF;
+
+
+
+	//shadows
+	--shadow: 20px 20px 100px rgba(31, 32, 37, 0.6);
+	--shadowYellow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+
+	//filters
+	--filter-white: invert(100%) sepia(92%) saturate(2%) hue-rotate(100deg) brightness(103%) contrast(101%);
+
+
+	// Site colors (Кольори сайту):
+	// =================================================================
+	--primary: var(--dark100); // Site main color - (Основний колір сайту)
+	--secondary: var(--dark300); // Site secondary color - (Додатковий колір сайту)
+	--accent: var(--blue400); // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+	--inverse: var(--blue100); // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+
+	--textColorMain: var(--dark100);
+	--titleColorMain: var(--dark300);
+
+
+	//transition
+	--transition: background .3s ease, color .3s ease, filter .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease, padding .3s ease;
+}

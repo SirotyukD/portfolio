@@ -1,0 +1,145 @@
+//====================================================================================================
+.footer {
+  padding: rem(105) rem(25) rem(60);
+
+  @media (max-width:$mobile) {
+    padding: rem(55) 0 rem(60);
+
+  }
+
+
+  &__container {}
+
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    gap: rem(20);
+
+    @media (max-width:$mobile) {
+      flex-direction: column;
+    }
+  }
+
+  &__cnt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    @media (max-width:$mobile) {
+      margin-bottom: rem(20);
+    }
+  }
+
+  &__contacts {}
+
+  &__contacts-title {
+    color: #594D43;
+    font-weight: 600;
+    letter-spacing: 8.4px;
+    line-height: 1;
+    @include adaptiveValue("margin-bottom", 8, 0);
+  }
+
+  &__contacts-mail {
+    color: var(--dark400);
+    @include adaptiveValue("font-size", 30, 24);
+    font-weight: 700;
+    line-height: math.div(40, 30);
+    letter-spacing: -0.6px;
+
+    &::before {
+      background: var(--dark400);
+    }
+  }
+
+  &__inf {
+    display: flex;
+    justify-content: space-between;
+    flex: 0 1 55.5%;
+
+    @media (max-width:$tablet) {
+      flex: 0 1 65%;
+    }
+
+    @media (max-width:$mobile) {
+      flex: 1 1 auto;
+      flex-wrap: wrap;
+      gap: rem(20);
+    }
+
+    @media (max-width:$mobileSmall) {
+      flex-direction: column;
+    }
+  }
+
+  &__nav-col {
+    max-width: rem(234);
+  }
+
+  &__nav-title {
+    color: #3D475E;
+    font-weight: 600;
+    font-size: rem(15);
+    @include adaptiveValue("margin-bottom", 24, 12);
+  }
+
+  &__nav-menu {}
+
+  &__nav-list {}
+
+  &__nav-item {
+    margin-bottom: rem(5);
+  }
+
+  &__nav-link {
+    color: #4A556D;
+
+  }
+
+  &__nav-txt {
+    color: #4A556D;
+    @include adaptiveValue("margin-bottom", 32, 16);
+  }
+
+  &__form-subscribe {}
+
+  &__bot {
+    @include adaptiveValue("margin-top", 90, 45);
+    text-align: center;
+    letter-spacing: -0.14px;
+    font-weight: 500;
+
+    @media (max-width:$mobileSmall) {
+      text-align: left;
+    }
+  }
+}
+
+.subscribe-form {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  border: 1px solid #CCDBF1;
+  background: #E0EDFF;
+  padding: rem(4) rem(5) rem(4) rem(14);
+
+  &__input {
+    margin-bottom: 0;
+    background: transparent;
+    border: unset;
+    padding: 0;
+    min-height: unset;
+  }
+
+  &__btn {
+    min-width: rem(37);
+    min-height: rem(37);
+    border-radius: 4px;
+    box-shadow: 0px 6px 10px 0px rgba(12, 171, 255, 0.20);
+  }
+}
+
+
+//====================================================================================================

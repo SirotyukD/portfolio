@@ -1,0 +1,63 @@
+//<INPUT>
+// Сніппет (HTML): inp
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
+.input {
+	// border-radius: 0 !important;
+	width: 100%;
+	display: inline-flex;
+	align-items: center;
+	padding: rem(12) rem(14);
+	min-height: rem(45);
+	color: rgb(122, 131, 152);
+	@include adaptiveValue("margin-bottom", 20, 10);
+	border-radius: rem(4);
+	border: 1px solid #CCDBF1;
+	background: #E0EDFF;
+	line-height: math.div(16, 14);
+
+	// @media (max-width:$mobile) {
+	// 	min-height: rem(44);
+	// }
+
+
+	&:focus {
+		outline: none;
+		outline: 0;
+		outline-width: 0px;
+	}
+
+	&._form-focus {}
+
+	&._form-error {}
+}
+
+.input[placeholder]:not([data-placeholder-nohiden]) {
+	&::placeholder {
+		color: rgba(122, 131, 152, 1);
+		transition: var(--transition);
+	}
+
+	&:focus::placeholder {
+		// opacity: 0;
+		color: rgba(122, 131, 152, .5);
+		outline: none;
+		outline: 0;
+		outline-width: 0px;
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		-webkit-appearance: none;
+		border-width: 0;
+	}
+}
+
+textarea.input {
+	resize: none;
+	padding: 0px 0px;
+}
