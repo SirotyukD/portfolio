@@ -6,10 +6,14 @@
          <nav class="menu__body">
             <div class="menu__body-wrap">
                <ul class="menu__list">
-                  <li class="menu__item -link"><a data-goto="#header" href="#" class="menu__link">About</a></li>
-                  <li class="menu__item -link"><a data-goto="#header" href="#" class="menu__link">Courses</a></li>
-                  <li class="menu__item -link"><a data-goto="#header" href="#" class="menu__link">Teachers</a></li>
-                  <li class="menu__item -link"><a data-goto="#header" href="#" class="menu__link">Pricing</a></li>
+                  <li class="menu__item -link"><a data-goto-top="80" data-goto="#about" href="#"
+                        class="menu__link">About</a></li>
+                  <li class="menu__item -link"><a data-goto-header data-goto="#feature" href="#"
+                        class="menu__link">Courses</a></li>
+                  <li class="menu__item -link"><a data-goto-header data-goto="#cover" href="#"
+                        class="menu__link">Teachers</a></li>
+                  <li class="menu__item -link"><a data-goto-header data-goto="#plans" href="#"
+                        class="menu__link">Pricing</a></li>
                </ul>
                <div data-da=".header__container, 991.99, 1" class="menu__inf">
                   <div class="menu__inf-wrap">
@@ -22,8 +26,8 @@
          </nav>
       </div>
       <div data-da=".menu__body-wrap, 399.99" class="header__login-menu menu-login">
-         <a href="#" class="menu-login__btn -link">Log In</a>
-         <a href="#" class="menu-login__btn button _lgh">Sign In</a>
+         <a data-popup="#popup-login" href="#" class="menu-login__btn -link">Log In</a>
+         <a data-popup="#popup-sign" href="#" class="menu-login__btn button _lgh">Sign In</a>
       </div>
    </div>
 </header>

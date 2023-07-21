@@ -79,13 +79,29 @@ body::after {
 	font-size: rem(20);
 	width: rem(24);
 	height: rem(24);
-	overflow: hidden;
+	// overflow: hidden;
 
 }
 
 .popup__title {
 	text-align: center;
-	@include adaptiveValue("margin-bottom", 40, 20);
+	@include adaptiveValue("margin-bottom", 30, 15);
+}
+
+.popup__txt {
+	text-align: center;
+	line-height: 1.25;
+	@include adaptiveValue("margin-bottom", 30, 15);
+
+}
+
+.popup__text-account {
+	@include adaptiveValue("margin-top", 20, 10);
+	text-align: center;
+
+	// a {
+	// 	color: var(--accent);
+	// }
 }
 
 .popup__img {

@@ -82,14 +82,19 @@
 
 		@media (any-hover: hover) {
 			&:hover {
+				box-shadow: none;
+
 				img {
 					transform: translateX(rem(5));
 				}
 			}
 
-			&:hover::before,
+			&:hover::before {
+				transform: rotate(-4.2deg);
+			}
+
 			&:hover::after {
-				transform: rotate(1deg);
+				transform: rotate(4.45deg);
 			}
 		}
 	}

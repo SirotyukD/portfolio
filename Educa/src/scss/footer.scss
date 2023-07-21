@@ -3,7 +3,7 @@
   padding: rem(105) rem(25) rem(60);
 
   @media (max-width:$mobile) {
-    padding: rem(55) 0 rem(60);
+    padding: rem(55) 0 rem(40);
 
   }
 
@@ -126,7 +126,7 @@
   padding: rem(4) rem(5) rem(4) rem(14);
 
   &__input {
-    margin-bottom: 0;
+    margin-bottom: 0 !important;
     background: transparent;
     border: unset;
     padding: 0;

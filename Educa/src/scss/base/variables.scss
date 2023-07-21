@@ -7,7 +7,7 @@
 	--fontMain: 'Poppins', sans-serif;
 	--fontTitle: 'Poppins', sans-serif;
 	--fontText: 'Poppins', sans-serif;
-	--fontAccent: 'Seaweed Script', cursive;
+	--fontAccent: 'SeaweedScript', cursive;
 
 	//colors
 	--light: #fff;
@@ -40,5 +40,5 @@
 
 
 	//transition
-	--transition: background .3s ease, color .3s ease, filter .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease, padding .3s ease;
+	--transition: background .3s ease, background-color .3s ease, color .3s ease, filter .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease, padding .3s ease;
 }
