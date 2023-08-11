@@ -1,7 +1,1 @@
-<svg width="113" height="147" viewBox="0 0 113 147" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.387817" y="0.979248" width="112.314" height="145.75" rx="4.28678" fill="white"/>
-<rect x="13.2481" y="14.6969" width="27.4354" height="2.57207" fill="#ECEFF6"/>
-<rect x="78.4071" y="14.697" width="21.4339" height="2.57207" fill="#ECEFF6"/>
-<path d="M49.99 47.2764C32.601 49.8052 19.2496 64.6869 19.2496 82.6672C19.2496 102.422 35.3667 118.437 55.2482 118.437C65.779 118.437 75.2537 113.944 81.8366 106.782" stroke="#1F1F26" stroke-width="4.28678" stroke-linecap="round"/>
-<path d="M56.1159 81.9995V44.2758C77.1211 41.2757 106.271 70.8538 86.552 102.576L56.1159 81.9995Z" fill="#7118EF"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="113" height="147" fill="none" xmlns:v="https://vecta.io/nano"><rect x=".388" y=".979" width="112.314" height="145.75" rx="4.287" fill="#fff"/><path d="M13.248 14.697h27.435v2.572H13.248zm65.159 0h21.434v2.572H78.407z" fill="#eceff6"/><path d="M49.99 47.276c-17.389 2.529-30.74 17.41-30.74 35.391 0 19.755 16.117 35.77 35.999 35.77 10.531 0 20.005-4.493 26.588-11.655" stroke="#1f1f26" stroke-width="4.287" stroke-linecap="round"/><path d="M56.116 82V44.276c21.005-3 50.155 26.578 30.436 58.3L56.116 82z" fill="#7118ef"/></svg>

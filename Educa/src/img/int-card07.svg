@@ -1,16 +1,1 @@
-<svg width="213" height="87" viewBox="0 0 213 87" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="0.294189" y="0.589844" width="211.767" height="85.7355" rx="4.28678" fill="white"/>
-<path d="M11.8684 37.8849H192.77" stroke="#ECECF9" stroke-width="0.857355" stroke-dasharray="2.83 2.83"/>
-<path d="M11.8684 60.1762H192.77" stroke="#ECECF9" stroke-width="0.857355" stroke-dasharray="2.83 2.83"/>
-<path d="M11.8684 82.4674H192.77" stroke="#ECECF9" stroke-width="0.857355" stroke-dasharray="2.83 2.83"/>
-<path d="M10.5824 82.896L29.4442 58.4613C40.5898 58.4613 67.1678 43.8863 78.7421 37.0275C92.8885 47.3157 111.322 51.6025 124.182 53.3172L150.331 46.4584L170.05 70.4643H184.197L198.343 58.4613" stroke="#DFDFDF" stroke-width="0.857355"/>
-<circle cx="29.873" cy="58.8899" r="3.42942" fill="#00D9FF"/>
-<circle cx="185.054" cy="70.0355" r="3.42942" fill="#00D9FF"/>
-<circle cx="197.915" cy="58.8899" r="3.42942" fill="black"/>
-<circle cx="169.622" cy="70.8929" r="3.42942" fill="#FFC700"/>
-<circle cx="124.182" cy="52.8884" r="3.42942" fill="#FFC700"/>
-<circle cx="77.8848" cy="37.456" r="3.42942" fill="#FF5600"/>
-<circle cx="149.903" cy="46.8869" r="3.42942" fill="#FF5600"/>
-<rect x="11.0111" y="13.4503" width="27.4354" height="4.28678" fill="#ECEFF6"/>
-<rect x="175.623" y="13.4503" width="21.4339" height="4.28678" fill="#ECEFF6"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="213" height="87" fill="none" xmlns:v="https://vecta.io/nano"><rect x=".294" y=".59" width="211.767" height="85.736" rx="4.287" fill="#fff"/><path d="M11.868 37.885H192.77M11.868 60.176H192.77M11.868 82.467H192.77" stroke="#ececf9" stroke-width=".857" stroke-dasharray="2.83 2.83"/><path d="M10.582 82.896l18.862-24.435c11.146 0 37.724-14.575 49.298-21.434 14.146 10.288 32.58 14.575 45.44 16.29l26.149-6.859 19.719 24.006h14.147l14.146-12.003" stroke="#dfdfdf" stroke-width=".857"/><g fill="#00d9ff"><circle cx="29.873" cy="58.89" r="3.429"/><circle cx="185.054" cy="70.036" r="3.429"/></g><circle cx="197.915" cy="58.89" r="3.429" fill="#000"/><g fill="#ffc700"><circle cx="169.622" cy="70.893" r="3.429"/><circle cx="124.182" cy="52.888" r="3.429"/></g><g fill="#ff5600"><circle cx="77.885" cy="37.456" r="3.429"/><circle cx="149.903" cy="46.887" r="3.429"/></g><path d="M11.011 13.45h27.435v4.287H11.011zm164.612 0h21.434v4.287h-21.434z" fill="#eceff6"/></svg>

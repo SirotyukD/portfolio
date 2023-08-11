@@ -1,0 +1,178 @@
+// Заголовки, загальні БЕМ блоки та інше...
+body {
+   @include adaptiveValue("font-size", 18, 12);
+   background-color: #000;
+   line-height: 1.6;
+}
+
+.wrapper {
+   position: relative;
+
+   &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: radial-gradient(245.02% 125.66% at 3.17% 96.20%, rgba(0, 0, 0, 0.70) 0%, rgba(10, 33, 33, 0.70) 68.86%, rgba(20, 20, 19, 0.70) 94.01%, rgba(15, 30, 29, 0.70) 100%);
+      z-index: -3;
+   }
+}
+
+section {
+   @include adaptiveValue("margin-bottom", 140, 47);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.-title {
+   font-family: var(--fontTitle);
+   font-weight: 300;
+   color: var(--titleColorMain);
+}
+
+h1 {
+   @include adaptiveValue("font-size", 45, 26);
+   line-height: math.div(56, 48);
+}
+
+h2 {
+   @include adaptiveValue("font-size", 48, 19);
+   line-height: math.div(38, 35);
+
+}
+
+h3 {
+   @include adaptiveValue("font-size", 38, 19);
+   line-height: math.div(38, 28);
+}
+
+.-titlle-bb {
+   @include adaptiveValue("padding-bottom", 42, 15);
+   border-bottom: 1px solid rgba(255, 255, 255, 0.30);
+}
+
+.-link {
+   position: relative;
+   display: inline-flex;
+   color: var(--primary);
+
+   &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 1px;
+      background-color: var(--primary);
+      bottom: rem(0);
+      left: 0;
+      transform-origin: right;
+      transform: scaleX(0);
+      transition: transform .3s ease-in-out;
+   }
+
+   @media (any-hover: hover) {
+      &:hover::before {
+         transform-origin: left;
+         transform: scaleX(1);
+      }
+   }
+}
+
+
+
+.kpg-icon {
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   flex: 0 0 rem(36);
+   width: rem(36);
+   height: rem(36);
+   border-radius: rem(12);
+   border: 1px solid rgba(255, 255, 255, 0.12);
+   transition: border .3s ease;
+
+
+   img {
+      object-fit: contain;
+   }
+}
+
+[data-animated] {
+   opacity: 0;
+}
+
+[class*="picture-bg"] {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 101%;
+   height: 101%;
+   max-width: 101%;
+   z-index: -2;
+
+   img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}
+
+
+.custom-loader {
+   width: 40px;
+   height: 40px;
+   border-radius: 50%;
+   background:
+      radial-gradient(farthest-side, #766DF4 94%, #0000) top/8px 8px no-repeat,
+      conic-gradient(#0000 30%, #766DF4);
+   -webkit-mask: radial-gradient(farthest-side, #0000 calc(100% - 8px), #000 0);
+   animation: s3 1s infinite linear;
+   transition: opacity .3s ease 1.6s;
+   pointer-events: none;
+
+   @media (max-width:$mobile) {
+      width: 25px;
+      height: 25px;
+
+   }
+
+   .loaded & {
+      opacity: 0;
+   }
+}
+
+.logo {
+   width: rem(85);
+   height: rem(24);
+   display: inline-flex;
+   filter: var(--filter-white);
+   transition: filter .3s ease, opacity .3s ease;
+
+
+   @media (min-width:$mobile) {
+      width: rem(120);
+      height: rem(35);
+
+   }
+}
+
+.-bkf {
+   position: relative;
+   overflow: hidden;
+
+   &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(12.5px);
+      z-index: -1;
+   }
+}

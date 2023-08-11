@@ -1,0 +1,194 @@
+//<BUTTONS (a.btn+tab)>
+// Сніппет (HTML): btn
+
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-height: rem(36);
+	padding: rem(10) rem(20);
+	// border-radius: rem(10);
+	border-radius: rem(15);
+	background-color: var(--grey400);
+	// font-size: rem(15);
+
+	line-height: 1;
+	transition: var(--transition);
+	position: relative;
+	overflow: hidden;
+
+	@media (min-width:$mobile) {
+		border-radius: rem(20);
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			background-color: var(--accent);
+			color: var(--dark);
+		}
+	}
+
+	&::before {
+		// border-radius: rem(10);
+		border-radius: rem(15);
+	}
+
+	&.-fw {
+		width: 100%;
+	}
+
+	&.-sm {
+		font-size: rem(13);
+	}
+
+	&.-numb {
+		font-family: var(--fontAccent);
+	}
+
+	&.-lgh100 {
+		background-color: rgba(255, 255, 255, 0.17);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--accent);
+			}
+		}
+
+	}
+
+	&.-lgh300 {
+		background-color: rgba(78, 78, 78, 0.29);
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--accent);
+			}
+		}
+	}
+
+	&.-icon {
+		min-height: rem(52);
+		min-width: rem(52);
+		padding: rem(5);
+		gap: rem(10);
+		// border-radius: rem(20);
+		border-radius: rem(15);
+
+		@media (min-width:$mobile) {
+			min-height: rem(61);
+			min-width: rem(61);
+			border-radius: rem(20);
+		}
+
+		&::before {
+			// border-radius: rem(20);
+			border-radius: rem(15);
+			backdrop-filter: blur(17.5px);
+
+			@media (min-width:$mobile) {
+				border-radius: rem(20);
+			}
+		}
+
+		span img,
+		span picture {
+			filter: var(--filter-white);
+			transition: filter .3s ease;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+
+				.kpg-icon {
+					border: 1px solid rgba(11, 30, 30, 0.30);
+				}
+
+				span img,
+				span picture {
+					filter: var(--filter-dark);
+				}
+			}
+		}
+
+
+		&--text {
+			padding: rem(5) rem(16);
+			font-size: rem(11);
+			text-transform: uppercase;
+			line-height: 1.55;
+
+
+			.kpg-icon {
+				// margin-top: rem(4);
+			}
+		}
+	}
+
+	&.-text--hide {
+
+		padding: rem(5);
+		border-radius: rem(15);
+
+		&::before {
+			border-radius: rem(15);
+		}
+
+
+		@media (any-hover: hover) {
+			&:hover {
+				.kpg-icon {
+					border: unset;
+				}
+			}
+		}
+
+		@media (min-width:$mobile) {
+			padding: rem(10) rem(20);
+			border-radius: rem(20);
+
+			&::before {
+				border-radius: rem(20);
+			}
+
+			@media (any-hover: hover) {
+				&:hover {
+					.kpg-icon {
+						border: 1px solid rgba(0, 0, 0, 0.12);
+					}
+				}
+			}
+
+		}
+
+		.button__txt {
+			display: none;
+
+			@media (min-width:$mobile) {
+				display: inline-flex;
+			}
+		}
+
+		.kpg-icon {
+			border: unset;
+			margin-top: 0;
+
+			@media (min-width:$mobile) {
+				border: 1px solid rgba(255, 255, 255, 0.12);
+				// margin-top: rem(3);
+
+
+			}
+
+			img {
+				width: rem(35);
+				height: rem(35);
+
+				@media (min-width:$mobile) {
+					width: rem(25);
+					height: rem(25);
+
+				}
+			}
+		}
+	}
+}

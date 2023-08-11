@@ -1,0 +1,160 @@
+//<FORM>
+// Сніппет (HTML):
+.form {
+
+
+	max-width: rem(660);
+	// border-radius: 30px;
+	border-radius: rem(15);
+	// backdrop-filter: blur(67.5px);
+	position: relative;
+	overflow: hidden;
+
+	@media (min-width:$mobile) {
+		border-radius: rem(20);
+
+	}
+
+	&__img {
+		position: absolute;
+
+		&_top {
+			top: calc(-100% + 160px);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+
+		&_bottom {
+			bottom: rem(3);
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+
+	&__body {
+		margin-top: rem(3);
+		padding: rem(30);
+		background: linear-gradient(173deg, rgba(255, 255, 255, 0.18) 0%, rgba(255, 255, 255, 0.06) 100%), rgba(0, 0, 0, 0.60);
+		backdrop-filter: blur(67.5px);
+		// border-radius: 30px;
+		border-radius: rem(15);
+
+		@media (min-width:$mobile) {
+			border-radius: rem(20);
+
+		}
+
+	}
+
+
+	&__title {
+
+		margin-bottom: rem(25);
+		@include adaptiveValue("font-size", 24, 14);
+		font-weight: 700;
+	}
+
+	&__row {
+		@media (min-width:$mobileSmall) {
+			display: flex;
+			justify-content: space-between;
+			gap: rem(25);
+		}
+	}
+
+	&__input {
+
+		@media (min-width:$mobileSmall) {
+			width: calc(50% - rem(25));
+		}
+	}
+
+	&__textarea {
+		overflow: hidden;
+	}
+
+	&__button.button.-icon {
+		// border-radius: 20px;
+		border-radius: rem(15);
+		background: var(--secondary);
+		backdrop-filter: blur(17px);
+		color: #161A02;
+		min-height: rem(76);
+		padding-left: rem(30);
+		padding-right: rem(20);
+		justify-content: space-between;
+		letter-spacing: 0.6px;
+		text-transform: uppercase;
+		@include adaptiveValue("font-size", 16, 12);
+		text-align: left;
+		line-height: 1.5;
+		gap: rem(50);
+
+		@media (min-width:$mobile) {
+			border-radius: rem(20);
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				background: #70FF00;
+				// color: var(--primary);
+
+				// &.-icon span {
+				// 	border: 1px solid rgba(255, 255, 255, 0.4);
+				// }
+
+				&.-icon span.kpg-icon img {
+					filter: var(--filter-dark);
+				}
+			}
+		}
+
+		&.-icon span.kpg-icon {
+			border: 1px solid rgba(0, 0, 0, 0.12);
+		}
+
+		&.-icon span.kpg-icon img {
+			filter: invert(29%) sepia(86%) saturate(328%) hue-rotate(28deg) brightness(94%) contrast(98%);
+		}
+
+	}
+}
+
+
+//</FORM>
+
+// <BUTTONS>
+// Сніппет (HTML): btn
+@import "button";
+
+// <INPUTS>
+// Сніппет (HTML): inp
+@import "input";
+
+// <CHECK>
+// Сніппет (HTML): chk
+// @import "checkbox";
+
+// <RADIO>
+// Сніппет (HTML): opt
+// @import "radio";
+
+// <SELECT>
+// Сніппет (HTML): sel
+@import "select";
+
+// <RATING>
+// Сніппет (HTML): rating
+// @import "rating";
+
+// <QUANTITY>
+// Сніппет (HTML): qa
+// @import "quantity";
+
+// <RANGE>
+// Сніппет (HTML):
+// @import "range";
+
+// <CALENDAR>
+// Сніппет (HTML):
+// @import "datepicker";

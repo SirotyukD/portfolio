@@ -1,0 +1,28 @@
+<div class="form">
+  <img loading="lazy" src="@img/elipse--top.svg" alt="elipse" class="form__img form__img_top">
+  <img loading="lazy" src="@img/elipse--bottom.svg" alt="elipse" class="form__img form__img_bottom">
+
+  <form class="form__body" action="files/sendmail/sendmail.php" method="POST">
+    <p class="form__title">Розрахувати маршрут та дізнатись ідефікативну ставку</p>
+    <div class="form__row">
+      <input type="text" name="form[first-name]" placeholder="Ім’я" class="form__input input">
+      <input type="text" name="form[second-name]" placeholder="Прізвище" class="form__input input">
+    </div>
+    <div class="form__row">
+      <input type="text" name="form[role]" placeholder="Посада / роль" class="form__input input">
+      <input type="text" name="form[company-name]" placeholder="Назва компанії" class="form__input input">
+    </div>
+    <div class="form__row">
+      <input type="email" name="form[email]" placeholder="Email" class="form__input input">
+      <input type="tel" name="form[phone]" placeholder="Телефон" class="form__input input">
+    </div>
+
+    <textarea autocomplete="off" rows="1" name="form[text]" placeholder="Ваше запитання чи пропозиція ..."
+      class="form__textarea input"></textarea>
+
+    <button type="submit" class="form__button button -fw -icon -icon--text">
+      <span>Отримати консультацію</span> <span class="kpg-icon"><img src="@img/icons/icon-telegram.svg"
+          alt="icon"></span>
+    </button>
+  </form>
+</div>

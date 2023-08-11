@@ -3,6 +3,7 @@
   padding: rem(170) 0 rem(117);
   margin-bottom: rem(145);
 
+
   @media (max-width:$mobile) {
     padding: rem(120) 0 rem(80);
     margin-bottom: rem(50);
@@ -41,23 +42,40 @@
     @include adaptiveValue("font-size", 50, 30);
     line-height: math.div(50, 50);
     @include adaptiveValue("margin-bottom", 16, 8);
+
+    &._watcher-view {
+      animation-delay: .1s;
+    }
   }
 
   &__title {
     @include adaptiveValue("font-size", 85, 20);
     @include adaptiveValue("margin-bottom", 40, 20);
 
+    &._watcher-view {
+      animation-delay: .2s;
+    }
+
     @media (max-width:$mobile) {
       @include adaptiveValue("font-size", 85, 50);
-
     }
   }
 
   &__txt {
     @include adaptiveValue("margin-bottom", 40, 20);
+
+    &._watcher-view {
+      animation-delay: .3s;
+    }
+
   }
 
   &__buttons {
+
+    &._watcher-view {
+      animation-delay: .4s;
+    }
+
     @media (max-width:$pc) {
       flex-direction: column;
       align-items: flex-start;
@@ -77,7 +95,6 @@
 
   @media (max-width:$mobile) {
     padding: rem(0) 0 rem(50);
-
   }
 
   &__container {}
@@ -86,14 +103,13 @@
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    @include adaptiveValue("margin-bottom", 130, 40);
+    @include adaptiveValue("margin-bottom", 130, 20);
     gap: rem(30);
 
     @media (max-width:$mobileSmall) {
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-
     }
   }
 
@@ -108,6 +124,11 @@
     line-height: 160.9%;
     letter-spacing: 2.5px;
     @include adaptiveValue("margin-bottom", 14, 10);
+    display: block;
+
+    &._watcher-view {
+      animation-delay: .1s;
+    }
   }
 
   &__title {
@@ -115,9 +136,17 @@
     @include adaptiveValue("font-size", 50, 28);
     line-height: math.div(58, 50);
     letter-spacing: 0.5px;
+
+    &._watcher-view {
+      animation-delay: .2s;
+    }
   }
 
   &__more {
+    &._watcher-view {
+      animation-delay: .15s;
+    }
+
     @media (max-width:$mobileSmall) {
       align-self: center;
     }
@@ -162,6 +191,24 @@
       width: 90%;
     }
 
+    &:nth-child(1) {
+      &._watcher-view {
+        animation-delay: .1s;
+      }
+    }
+
+    &:nth-child(2) {
+      &._watcher-view {
+        animation-delay: .2s;
+      }
+    }
+
+    &:nth-child(3) {
+      &._watcher-view {
+        animation-delay: .3s;
+      }
+    }
+
     &:nth-child(2):after,
     &:nth-child(2)::before {
       position: absolute;
@@ -177,10 +224,20 @@
       left: 0;
     }
 
+    &._watcher-view:nth-child(2)::before {
+      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation-delay: .75s;
+    }
+
     &:nth-child(2)::after {
       top: rem(-10);
       width: calc(100% + rem(25));
       height: calc(100% + rem(11));
+    }
+
+    &._watcher-view:nth-child(2)::after {
+      animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+      animation-delay: .85s;
     }
   }
 
@@ -249,7 +306,11 @@
     line-height: math.div(90, 85);
     text-align: center;
     letter-spacing: -0.85px;
-    @include adaptiveValue("margin-bottom", 200, 50);
+    @include adaptiveValue("margin-bottom", 200, 30);
+
+    &._watcher-view {
+      animation-delay: .15s;
+    }
   }
 
   &__cnt {
@@ -287,7 +348,18 @@
       @media (max-width:$mobile) {
         padding-right: 0;
       }
+    }
 
+    .info-box__icon._watcher-view {
+      animation-delay: .15s;
+    }
+
+    .info-box__title._watcher-view {
+      animation-delay: .35s;
+    }
+
+    .info-box__txt._watcher-view {
+      animation-delay: .55s;
     }
   }
 
@@ -299,17 +371,24 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      width: rem(452);
-      height: rem(452);
 
-      @media (max-width:$tablet) {
-        width: rem(352);
-        height: rem(352);
+      &._watcher-view {
+        animation-delay: .25s;
       }
 
-      @media (max-width:$mobile) {
-        width: rem(252);
-        height: rem(252);
+      &__item {
+        width: rem(452);
+        height: rem(452);
+
+        @media (max-width:$tablet) {
+          width: rem(352);
+          height: rem(352);
+        }
+
+        @media (max-width:$mobile) {
+          width: rem(252);
+          height: rem(252);
+        }
       }
     }
   }
@@ -332,6 +411,10 @@
 
     @media (max-width:$mobile) {
       max-width: rem(150);
+    }
+
+    &._watcher-view {
+      animation-delay: .25s;
     }
   }
 
@@ -356,6 +439,10 @@
         top: rem(90);
       }
 
+      &._watcher-view {
+        animation-delay: .35s;
+      }
+
     }
 
     &_2 {
@@ -372,6 +459,10 @@
       @media (max-width:$mobile) {
         max-width: rem(80);
         right: calc(100% + rem(5));
+      }
+
+      &._watcher-view {
+        animation-delay: .5s;
       }
     }
 
@@ -391,6 +482,10 @@
         max-width: rem(150);
         right: rem(-95);
         bottom: rem(20);
+      }
+
+      &._watcher-view {
+        animation-delay: .75s;
       }
     }
   }
@@ -416,22 +511,31 @@
   }
 
   .circle-bg {
-    width: rem(516);
-    height: rem(516);
     left: rem(-134);
     top: 50%;
     transform: translateY(-50%);
 
     @media (max-width:$tablet) {
-      width: rem(416);
-      height: rem(416);
       left: rem(-84);
     }
 
-    @media (max-width:$mobile) {
-      width: rem(316);
-      height: rem(316);
+    &._watcher-view {
+      animation-delay: .25s;
+    }
 
+    &__item {
+      width: rem(516);
+      height: rem(516);
+
+      @media (max-width:$tablet) {
+        width: rem(416);
+        height: rem(416);
+      }
+
+      @media (max-width:$mobile) {
+        width: rem(316);
+        height: rem(316);
+      }
     }
   }
 
@@ -454,6 +558,10 @@
     z-index: 5;
     transform: translate(-50%, -50%);
 
+    &._watcher-view {
+      animation-delay: .5s;
+    }
+
     @media (max-width:$pc) {
       transform: translate(0, 0);
       top: unset;
@@ -475,14 +583,34 @@
 
   &__item {
 
-    &_premium {}
+    &_premium {
+      &._watcher-view {
+        animation-delay: .15s;
+      }
+    }
 
-    &_basic {}
+    &_basic {
+      &._watcher-view {
+        animation-delay: .35s;
+      }
+    }
   }
 
   &__cnt {
     .info-box__icon {
       background: #001CAF;
+    }
+
+    .info-box__icon._watcher-view {
+      animation-delay: .15s;
+    }
+
+    .info-box__title._watcher-view {
+      animation-delay: .35s;
+    }
+
+    .info-box__txt._watcher-view {
+      animation-delay: .55s;
     }
   }
 
@@ -492,6 +620,10 @@
 
     @media (max-width:$mobile) {
       margin: 0 auto rem(30);
+    }
+
+    &._watcher-view {
+      animation-delay: .75s;
     }
   }
 
@@ -567,9 +699,20 @@
 
     .info-box {
 
+
+
       &__icon {
         background-color: #7118EF;
 
+        &._watcher-view {
+          animation-delay: .15s;
+        }
+      }
+
+      &__title {
+        &._watcher-view {
+          animation-delay: .35s;
+        }
       }
 
       &__txt {
@@ -577,6 +720,10 @@
 
         @media (max-width:$tablet) {
           padding-right: 0;
+        }
+
+        &._watcher-view {
+          animation-delay: .55s;
         }
       }
     }
@@ -628,6 +775,10 @@
     font-weight: 600;
     letter-spacing: -2px;
     @include adaptiveValue("margin-bottom", 120, 40);
+
+    &._watcher-view {
+      animation-delay: .1s;
+    }
   }
 
   &__items {
@@ -649,10 +800,22 @@
     padding: 4% 1% 2% 4%;
     border-radius: 8px;
     background: #FFF;
-    box-shadow: 0px 45px 100px -10px rgba(0, 0, 0, 0.02);
+    box-shadow: 0px 45px 100px -10px rgba(0, 0, 0, 0.05);
 
     @media (max-width:$mobile) {
       width: 100%;
+    }
+
+    @at-root .cmp__item:nth-child(1) {
+      animation-delay: .25s;
+    }
+
+    @at-root .cmp__item:nth-child(2) {
+      animation-delay: .5s;
+    }
+
+    @at-root .cmp__item:nth-child(3) {
+      animation-delay: .75s;
     }
   }
 
@@ -707,7 +870,6 @@
     bottom: 0;
   }
 
-
   &__container {
     max-width: rem(550);
     text-align: center;
@@ -716,17 +878,29 @@
   &__title {
     line-height: 1.1;
     @include adaptiveValue("margin-bottom", 30, 20);
+
+    &._watcher-view {
+      animation-delay: .1s;
+    }
   }
 
   &__txt {
     @include adaptiveValue("font-size", 18, 16);
     line-height: math.div(30, 18);
     @include adaptiveValue("margin-bottom", 40, 20);
+
+    &._watcher-view {
+      animation-delay: .25s;
+    }
   }
 
   .buttons-demo {
     @media (max-width:$mobile) {
       justify-content: center;
+    }
+
+    &._watcher-view {
+      animation-delay: .3s;
     }
   }
 }

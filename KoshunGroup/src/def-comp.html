@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"Components"
+})
+
+<body>
+	<div class="wrapper">
+		@@include('html/_header.htm',{})
+		<main id="page" class="page">
+			<section class="def-comp">
+				<div class="def-comp__container">
+					<div class="def-comp__item">
+						<h2 class="def-comp__item-title -title">
+							Default components:
+						</h2>
+						<h1 class="-title">Title H1</h1>
+						<h2 class="-title">Title H2</h2>
+						<h3 class="-title">Title H3</h3>
+						<h4 class="-title">Title H4</h4>
+					</div>
+					<div class="def-comp__item">
+						<h3 class="def-comp__item-title -title">
+							Text:
+						</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque neque, ex unde alias saepe
+							voluptates ipsam
+							voluptatum modi praesentium corrupti iure rerum delectus magnam accusantium ipsum tenetur! Velit,
+							similique
+							inventore!
+						</p>
+					</div>
+					<div class="def-comp__item">
+						<h3 class="def-comp__item-title -title">
+							Text link:
+						</h3>
+						<a href="#" class="-link">Read more</a>
+
+					</div>
+					<div class="def-comp__item">
+						<h3 class="def-comp__item-title -title">
+							Buttons:
+						</h3>
+						<div class="def-comp__item-wrap">
+
+							<a href="#" class="button">Button</a>
+
+							<a href="#" class="button -sm -numb">+421 (905) 648 014</a>
+
+							<a href="#" class="button -lgh100">Button</a>
+
+							<a href="#" class="button -lgh300">Button</a>
+
+							<a href="#" class="button -icon -icon--text">Leave a request<span class="kpg-icon"><img
+										src="@img/icons/icon-telegram.svg" alt="icon"></span></a>
+
+							<a href="#" class="button -icon -icon--text -text--hide"><span class="button_txt">Leave a request</span>
+								<span class="kpg-icon"><img src="@img/icons/icon-telegram.svg" alt="icon"></span></a>
+
+							<a href="#" class="button -icon"> <span class="kpg-icon"><img src="@img/icons/icon-telegram.svg"
+										alt="icon"></span></a>
+
+						</div>
+					</div>
+					<div class="def-comp__item">
+						<h3 class="def-comp__item-title -title">
+							Forms:
+						</h3>
+						<div class="form">
+							<img src="@img/elipse--top.svg" alt="elipse" class="form__img form__img_top">
+							<img src="@img/elipse--bottom.svg" alt="elipse" class="form__img form__img_bottom">
+
+							<form class="form__body" method="POST">
+								<p class="form__title">Розрахувати маршрут та дізнатись ідефікативну ставку</p>
+								<div class="form__row">
+									<input type="text" name="form[first-name]" placeholder="Ім’я" class="form__input input">
+									<input type="text" name="form[second-name]" placeholder="Прізвище" class="form__input input">
+								</div>
+								<div class="form__row">
+									<input type="text" name="form[role]" placeholder="Посада / роль" class="form__input input">
+									<input type="text" name="form[company-name]" placeholder="Назва компанії" class="form__input input">
+								</div>
+								<div class="form__row">
+									<input type="email" name="form[email]" placeholder="Email" class="form__input input">
+									<input type="tel" name="form[phone]" placeholder="Телефон" class="form__input input">
+								</div>
+
+								<textarea autocomplete="off" rows="1" name="form[text]" placeholder="Ваше запитання чи пропозиція ..."
+									class="form__textarea input"></textarea>
+
+								<button type="submit" class="form__button button -fw -icon -icon--text">
+									<p>Отримати консультацію</p> <span class="kpg-icon"><img src="@img/icons/icon-telegram.svg"
+											alt="icon"></span>
+								</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+		@@include('html/_footer.htm',{})
+	</div>
+</body>
+@@include('html/_js.htm',{})
+
+<style>
+	.page {
+		position: relative;
+		z-index: 1;
+	}
+
+	.def-comp {
+		padding-top: 150px;
+		padding-bottom: 50px;
+	}
+
+	.def-comp__item {
+		margin-bottom: 50px;
+	}
+
+	.def-comp__item-wrap {
+		margin-bottom: 20px;
+		display: flex;
+		align-items: center;
+		gap: 20px;
+		flex-wrap: wrap;
+	}
+
+	.def-comp__item-title {
+		margin-bottom: 30px;
+	}
+
+	/* form {
+		max-width: 500px;
+	} */
+</style>
+
+</html>

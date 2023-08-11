@@ -1,0 +1,220 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  border: 0px;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html.lock {
+  overflow: hidden;
+  touch-action: none;
+  overscroll-behavior: none;
+}
+
+.lock body {
+  overflow: hidden;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: none;
+}
+
+.loading body {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loaded body {
+  -webkit-transition: opacity 0.5s ease 0s;
+  -o-transition: opacity 0.5s ease 0s;
+  transition: opacity 0.5s ease 0s;
+  opacity: 1;
+  visibility: visible;
+}
+
+.fls-preloader {
+  pointer-events: none;
+  z-index: -1;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.fls-preloader__body {
+  padding: 0.93rem;
+  max-width: 31.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fls-preloader__counter {
+  font-size: 1rem;
+}
+
+.fls-preloader__line {}
+
+.fls-preloader__line span {
+  display: inline-block;
+  -webkit-transition: width 0.2s ease;
+  -o-transition: width 0.2s ease;
+  transition: width 0.2s ease;
+  height: 0.8rem;
+  background-color: #7A956B;
+}
+
+@keyframes spinner1 {
+  0% {
+    opacity: 1;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1.5, 1.5);
+  }
+
+  100% {
+    opacity: 0;
+    backface-visibility: hidden;
+    transform: translateZ(0) scale(1, 1);
+  }
+}
+
+.fls-preloader__spinner {
+  width: 56px;
+  height: 56px;
+  display: block;
+  overflow: hidden;
+  background: none;
+}
+
+.fls-preloader__spinner-item {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform: translateZ(0) scale(0.56);
+  backface-visibility: hidden;
+  transform-origin: 0 0;
+}
+
+.fls-preloader__spinner-item div {
+  box-sizing: content-box;
+}
+
+
+
+.fls-preloader__spinner-item div>div {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #85a2b6;
+  animation: spinner1 1s linear infinite;
+}
+
+.fls-preloader__spinner-item div:nth-child(1)>div {
+  left: 74px;
+  top: 44px;
+  animation-delay: -0.875s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(1) {
+  transform: rotate(0deg);
+  transform-origin: 80px 50px;
+}
+
+.fls-preloader__spinner-item div:nth-child(2)>div {
+  left: 65px;
+  top: 65px;
+  animation-delay: -0.75s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(2) {
+  transform: rotate(45deg);
+  transform-origin: 71px 71px;
+}
+
+.fls-preloader__spinner-item div:nth-child(3)>div {
+  left: 44px;
+  top: 74px;
+  animation-delay: -0.625s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(3) {
+  transform: rotate(90deg);
+  transform-origin: 50px 80px;
+}
+
+.fls-preloader__spinner-item div:nth-child(4)>div {
+  left: 23px;
+  top: 65px;
+  animation-delay: -0.5s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(4) {
+  transform: rotate(135deg);
+  transform-origin: 29px 71px;
+}
+
+.fls-preloader__spinner-item div:nth-child(5)>div {
+  left: 14px;
+  top: 44px;
+  animation-delay: -0.375s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(5) {
+  transform: rotate(180deg);
+  transform-origin: 20px 50px;
+}
+
+.fls-preloader__spinner-item div:nth-child(6)>div {
+  left: 23px;
+  top: 23px;
+  animation-delay: -0.25s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(6) {
+  transform: rotate(225deg);
+  transform-origin: 29px 29px;
+}
+
+.fls-preloader__spinner-item div:nth-child(7)>div {
+  left: 44px;
+  top: 14px;
+  animation-delay: -0.125s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(7) {
+  transform: rotate(270deg);
+  transform-origin: 50px 20px;
+}
+
+.fls-preloader__spinner-item div:nth-child(8)>div {
+  left: 65px;
+  top: 23px;
+  animation-delay: 0s;
+}
+
+.fls-preloader__spinner-item>div:nth-child(8) {
+  transform: rotate(315deg);
+  transform-origin: 71px 29px;
+}
