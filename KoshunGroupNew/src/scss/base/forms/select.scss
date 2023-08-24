@@ -1,0 +1,278 @@
+// <SELECT>
+// Сніппет (HTML): sel
+.select {
+	min-width: 0;
+	position: relative;
+	display: inline-block;
+
+	// .select__body
+	&__body {
+		position: relative;
+	}
+
+	// .select__title
+	&__title {
+		color: inherit;
+		text-align: left;
+		background-color: var(--grey400);
+		cursor: pointer;
+		min-width: rem(62);
+		min-height: rem(36);
+		border-radius: rem(10);
+		// border-radius: rem(15);
+		transition: background-color .3s ease;
+		backdrop-filter: blur(12.5px);
+		-webkit-backdrop-filter: blur(12.5px);
+		font-size: rem(15);
+
+		// @media (min-width:$mobile) {
+		// 	border-radius: rem(20);
+		// }
+
+		@media (min-width:$uhd) {
+			min-width: 3vw;
+			min-height: 1.5vw;
+			font-size: .75vw;
+		}
+
+
+		@media (any-hover: hover) {
+			&:hover {
+				background-color: var(--green300);
+			}
+		}
+
+		._select-open & {
+			background-color: var(--green300);
+		}
+	}
+
+	// .select__value
+	&__value {
+		display: flex;
+		min-width: 0;
+		align-items: center;
+		justify-content: center;
+		min-height: rem(36);
+		padding: rem(5) rem(10);
+		gap: rem(5);
+		transition: color .3s ease;
+
+		@media (any-hover: hover) {
+
+			.select__title:hover & {
+				color: var(--dark);
+			}
+		}
+
+		._select-open & {
+			color: var(--dark);
+		}
+
+
+		// >* {
+		// 	flex: 1 1 auto;
+		// }
+
+		&:after {
+			content: "";
+			// align-self: stretch;
+			flex: 0 0 rem(9);
+			width: rem(9);
+			height: rem(6);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: url('@img/icons/icon-arr-down.svg') no-repeat center / contain;
+			filter: var(--filter-white);
+			transition: filter .3s ease, transform .3s ease;
+			// transform: rotate(270deg);
+
+			@media (min-width:$uhd) {
+				flex: 0 0 .35vw;
+				width: 0.35vw;
+				height: 0.25vw;
+			}
+
+			@media (any-hover: hover) {
+				.select__title:hover & {
+					filter: var(--filter-dark);
+				}
+			}
+
+			._select-open & {
+				transform: rotate(-180deg);
+				filter: var(--filter-dark);
+			}
+		}
+
+		&._select-pseudo-label {
+			&::before {
+				content: attr(data-pseudo-label);
+				opacity: 0.5;
+			}
+		}
+	}
+
+	// .select__content
+	&__content {
+		// flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		// font-size: rem(15);
+		// margin-bottom: rem(2);
+
+	}
+
+	// .select__text
+	&__text {
+		flex: 1 1 auto;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+	}
+
+	&__input {
+		width: 100%;
+		background-color: transparent;
+		height: 100%;
+	}
+
+	// .select__options
+	&__options {
+		// color: #000;
+		// position: absolute;
+		// top: calc(100% - rem(1));
+		// top: 0;
+		// left: calc(100% + rem(7));
+		min-width: 100%;
+		// background-color: #fff;
+		// border: 1px solid #d9d9d9;
+		// padding: 10px 0px 5px 0px;
+
+		@media (min-width:$tablet) {
+			position: absolute;
+			top: calc(100% - rem(1));
+			left: 0;
+		}
+
+		@at-root .footer .select_menu-nav & {
+			@media (min-width:$mobile) {
+				position: absolute;
+				top: calc(100% - rem(1));
+				left: 0;
+			}
+		}
+	}
+
+	// .select__scroll
+	&__scroll {
+		overflow-y: auto;
+		overflow-x: hidden;
+		// Максимальна висота
+		max-height: rem(200);
+		margin-top: rem(7);
+		display: flex;
+		gap: rem(7);
+		flex-direction: column;
+
+
+		// Стилі скроллбару
+		.simplebar-scrollbar {
+			&::before {
+				//opacity: 1;
+			}
+		}
+	}
+
+	// .select__option
+	&__option {
+		width: 100%;
+		text-align: left;
+		cursor: pointer;
+		// padding: 5px 15px;
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: rem(62);
+		height: rem(36);
+		background-color: var(--grey400);
+		border: 1px solid transparent;
+		// border-radius: rem(15);
+		border-radius: rem(10);
+		color: var(--primary);
+		// font-size: rem(12);
+		font-size: rem(15);
+		backdrop-filter: blur(12.5px);
+		-webkit-backdrop-filter: blur(12.5px);
+		transition: color .3s ease, border .3s ease;
+
+		// @media (min-width:$mobile) {
+		// 	border-radius: rem(20);
+		// }
+
+		@media (min-width:$uhd) {
+			width: 3vw;
+			height: 1.5vw;
+			font-size: .75vw;
+		}
+
+
+
+		&[hidden] {
+			display: none;
+		}
+
+		&._select-selected {
+			// background-color: #eee;
+		}
+
+		@media (any-hover: hover) {
+			&:hover {
+				// background: #d9d9d9;
+				border-color: var(--secondary);
+				color: var(--secondary);
+			}
+		}
+	}
+
+	// Конструкція додаткових даних
+	&__row {
+		display: inline-flex;
+		align-items: center;
+	}
+
+	&__asset {}
+
+	&__text {}
+
+	&--show-top {
+		.select__options {
+			// top: auto;
+			// bottom: calc(100% - rem(1));
+			// border: 1px solid #d9d9d9;
+			// border-bottom: 0;
+			// border-radius: 4px 4px 0 0;
+			// padding: 5px 0px 10px 0px;
+		}
+	}
+
+	// Стан селекту
+	&._select-open {}
+
+	&._select-disabled {}
+
+	&._select-active {}
+
+	&._select-focus {}
+
+	&._select-multiple {}
+
+	&._select-checkbox {}
+}
+
+// Тег
+._select-tag {
+	cursor: pointer;
+}

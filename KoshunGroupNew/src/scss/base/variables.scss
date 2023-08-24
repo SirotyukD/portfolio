@@ -1,0 +1,47 @@
+// ===============
+// colors palette
+// ===============
+:root {
+
+	//fonts
+	--fontMain: 'E-UKRAINE', sans-serif;
+	--fontTitle: 'E-UKRAINE', sans-serif;
+	--fontText: 'E-UKRAINE', sans-serif;
+	--fontAccent: 'E-UKRAINE', sans-serif;
+
+	//colors
+	--dark: #0B1E1E;
+	--light: #fff;
+	--yellow100: #DAFF00;
+	--yellow400: #D9FF00;
+	--grey100: rgba(255, 255, 255, 0.20);
+	--grey400: rgba(70, 70, 70, 0.40);
+	--green300: rgba(218, 255, 0, 0.4);
+	--green400: rgba(218, 255, 0, 0.59);
+
+
+	//shadows
+	--shadow: 20px 20px 100px rgba(31, 32, 37, 0.6);
+	--shadowYellow: 0px 6px 12px 0px rgba(249, 192, 106, 0.22);
+
+	//filters
+	--filter-white: invert(100%) sepia(92%) saturate(2%) hue-rotate(100deg) brightness(103%) contrast(101%);
+	--filter-dark: invert(8%) sepia(37%) saturate(755%) hue-rotate(131deg) brightness(94%) contrast(95%);
+	--filter-yellow: invert(85%) sepia(96%) saturate(3381%) hue-rotate(12deg) brightness(102%) contrast(106%);
+
+
+	// Site colors (Кольори сайту):
+	// =================================================================
+	--primary: var(--light); // Site main color - (Основний колір сайту)
+	--secondary: var(--yellow100); // Site secondary color - (Додатковий колір сайту)
+	--accent: var(--green400); // Site accent color - (Наприклад: кнопки дії, заголовки, посилання)
+	--inverse: var(--grey100); // Site inverse color - (Наприклад: для створення контрасту між фоном та текстом)
+
+	--textColorMain: var(--light);
+	--titleColorMain: var(--light);
+
+
+	//transition
+	--transition: background .3s ease, background-color .3s ease, color .3s ease, filter .3s ease, transform .3s ease, opacity .3s ease, box-shadow .3s ease, padding .3s ease;
+
+}

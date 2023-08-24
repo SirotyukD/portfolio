@@ -1,0 +1,219 @@
+// Базові стилі спойлерів
+// Сніппет (HTML): spoller
+
+// Блок зі спойлерами
+.spollers {
+	// display: grid;
+	// gap: 15px;
+
+	// Спойлер
+	&__item {
+		@include adaptiveValue("font-size", 24, 16);
+
+		@media (min-width:$uhd) {
+			font-size: 1.25vw;
+		}
+	}
+
+	// Заголовок спойлера
+	&__title {
+		width: 100%;
+		cursor: pointer;
+		text-align: left;
+		border-top: 1px solid rgba(255, 255, 255, 0.40);
+		position: relative;
+		list-style: none;
+		list-style-type: none;
+		@include adaptiveValue("padding-top", 40, 20);
+		@include adaptiveValue("padding-bottom", 40, 20);
+		transition: color .3s ease;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 3vw;
+		outline: none;
+
+		@media (min-width:$mobile) {
+			&:first-child {}
+
+			@at-root .spollers__item:first-child & {
+				border-top: unset;
+				padding-top: 0;
+			}
+		}
+
+		@media (min-width:$uhd) {
+			padding: 1.5vw 0;
+		}
+
+		[open] & {
+			color: var(--yellow400);
+		}
+
+		&::-webkit-details-marker {
+			display: none;
+		}
+
+		&::marker {
+			content: '';
+		}
+
+		span {
+			display: inline-flex;
+			width: rem(19);
+			height: rem(19);
+			flex: 0 0 rem(19);
+			border-radius: rem(4);
+			background-color: #fff;
+			position: relative;
+			transition: background-color .3s ease;
+			list-style: none;
+			list-style-type: none;
+			outline: none;
+
+			@media (min-width:$uhd) {
+				width: 1vw;
+				height: 1vw;
+				flex: 0 0 1vw;
+			}
+
+			@at-root [open] .spollers__title>span {
+				background-color: var(--yellow400);
+			}
+
+			._spoller-init & {
+				cursor: pointer;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					background-color: #000;
+					height: rem(2);
+					width: rem(11);
+					border-radius: rem(1);
+					transition: transform 0.5s ease 0s;
+
+					@media (min-width:$uhd) {
+						height: 0.1vw;
+						width: 0.5vw;
+					}
+				}
+
+				&::before {
+					transform: translate(-50%, -50%);
+				}
+
+				&::after {
+					transform: translate(-50%, -50%) rotate(-90deg);
+				}
+
+				@at-root ._spoller-init ._spoller-active>span::after {
+					transform: translate(-50%, -50%) rotate(0deg);
+				}
+			}
+		}
+
+
+		// &::marker {}
+
+
+	}
+
+	// Контент спойлера
+	&__body {
+		@include adaptiveValue("padding-bottom", 60, 40);
+
+		@media (min-width:$uhd) {
+			padding-bottom: 3vw;
+		}
+	}
+
+	&__image-ibg {
+		// border-radius: rem(10);
+		border-radius: rem(15);
+		overflow: hidden;
+		@include adaptiveValue("min-height", 170, 55);
+		margin-bottom: rem(10);
+
+		@media (min-width:$mobile) {
+			border-radius: rem(20);
+		}
+
+		@media (min-width:$uhd) {
+			min-height: 8vw;
+			margin-bottom: 1vw;
+		}
+	}
+
+	&__list {
+		margin-bottom: rem(10);
+
+		@media (min-width:$pc) {
+			columns: 2;
+			column-gap: 2vw;
+			// break-inside: avoid;
+			// orphans: 4;
+		}
+
+		@media (min-width:$uhd) {
+			margin-bottom: 1vw;
+		}
+	}
+
+	&__list-item {
+		padding: rem(20) 0 rem(20) rem(20);
+		border-top: 1px solid rgba(255, 255, 255, 0.11);
+		@include adaptiveValue("font-size", 25, 13);
+		position: relative;
+
+		@media (min-width:$tablet) {
+			@include adaptiveValue("font-size", 16, 10);
+			// flex: 0 0 calc(50% - 1vw);
+		}
+
+		@media (min-width:$uhd) {
+			padding: .75vw 0 .75vw .75vw;
+			font-size: .75vw;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+			width: rem(5);
+			height: rem(5);
+			border-radius: rem(1);
+			background-color: var(--yellow400);
+
+			@media (min-width:$uhd) {
+				width: 0.25vw;
+				height: 0.25vw;
+			}
+
+		}
+
+		&:first-child {
+			border-top: unset;
+		}
+
+		&.nbt {
+			@media (min-width:$pc) {
+				border-top: unset;
+
+			}
+		}
+
+		&.bb {
+			@media (min-width:$pc) {
+				break-before: column;
+			}
+		}
+	}
+
+	&__form {}
+}

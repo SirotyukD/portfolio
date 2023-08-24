@@ -1,0 +1,46 @@
+%anim-to-top {
+  animation: slide-in-bottom 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+%anim-to-top-filter {
+  animation: slide-in-bottom-filter 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+%anim-opacity {
+  animation: anim-opac 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+
+}
+
+@keyframes anim-opac {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slide-in-bottom {
+  0% {
+    transform: translateY(rem(100));
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+
+
+@keyframes slide-in-top {
+  0% {
+    transform: translateY(rem(-100));
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}

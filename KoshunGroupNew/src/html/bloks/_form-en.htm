@@ -1,0 +1,27 @@
+<div class="form">
+  <img loading="lazy" src="@img/elipse--top.svg" alt="elipse" class="form__img form__img_top">
+  <img loading="lazy" src="@img/elipse--bottom.svg" alt="elipse" class="form__img form__img_bottom">
+
+  <form class="form__body" method="POST">
+    <p class="form__title">Calculate the route and find out the ideal rate</p>
+    <div class="form__row">
+      <input type="text" name="form[first-name]" placeholder="First name" class="form__input input">
+      <input type="text" name="form[second-name]" placeholder="Last name" class="form__input input">
+    </div>
+    <div class="form__row">
+      <input type="text" name="form[role]" placeholder="Position / role" class="form__input input">
+      <input type="text" name="form[company-name]" placeholder="Company name" class="form__input input">
+    </div>
+    <div class="form__row">
+      <input type="email" name="form[email]" placeholder="Email" class="form__input input">
+      <input type="tel" name="form[phone]" placeholder="Phone" class="form__input input">
+    </div>
+
+    <textarea autocomplete="off" rows="1" name="form[text]" placeholder="Your question or suggestion ..."
+      class="form__textarea input"></textarea>
+
+    <button type="submit" class="form__button button -fw -fw3 -icon -icon--text">
+      <span>Get a consultation</span> <span class="kpg-icon"><img src="@img/icons/icon-telegram.svg" alt="icon"></span>
+    </button>
+  </form>
+</div>

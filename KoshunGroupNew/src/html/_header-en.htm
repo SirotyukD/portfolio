@@ -1,0 +1,34 @@
+<header data-lp data-scroll-show class="header">
+	<div class="header__container">
+
+		<div class="header__body -bkf">
+			<a data-popup="#popup-en" href="#" class="header__btn button -icon -icon--text -text--hide -bkf"><span
+					class="button__txt">Leave a
+					request</span> <span class="kpg-icon"><img src="@img/icons/icon-telegram.svg" alt="icon"></span></a>
+			<div class="header__logo">
+				@@include('./bloks/_logo.htm',{})
+			</div>
+			<div class="header__menu menu">
+				<button type="button" title="burger" class="menu__icon icon-menu -bkf"><span class="icon-menu__wrap"><span
+							class="icon-menu__line"></span></span></button>
+				<nav class="menu__body">
+					<div class="menu__body-wrap">
+						@@include('./bloks/_bkf-menu--header-en.htm',{})
+						<div class="menu__bot">
+							<div class="menu__bot-logo">
+								@@include('./bloks/_logo.htm',{})
+							</div>
+							<div class="menu__bot-txt">
+								© 2023. Koshun Group. <br> All rights reserved.
+							</div>
+						</div>
+					</div>
+				</nav>
+			</div>
+		</div>
+		<div class="header__bot">
+			@@include('./bloks/_bkf-menu--header-en.htm',{})
+		</div>
+
+	</div>
+</header>
